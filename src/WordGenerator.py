@@ -8,13 +8,13 @@ import pandas as pd
 import numpy as np
 import scipy
 import os
-import sys
 
 
 class WordGenerator():
     """
     WordGenerator decodes embeddings from a given database of words and generates
-    words from the database based on semantic distance from given inspiring words.
+    new words using two inspiring words. It does so by finding the words closest
+    to the embedded midpoint of the two inspiring words. 
     """
 
     def __init__(self, data_file : str, vocab_file : str) -> None:
@@ -26,14 +26,14 @@ class WordGenerator():
         """
         print("Initializing Word Generator...")
         self.data_file = data_file
-        # TODO refactor 
         self.embeddings = pd.read_csv(os.path.join("data", data_file)).transpose().values
         self.vocab = list(pd.read_csv(os.path.join("data", vocab_file)).Word)
         print("Initialized.")
     
-    def midpoint_scores(self, word1 : str, word2 : str, n_results : List[int]) -> List[str]: 
+    def generate_midpoint_words(self, word1 : str, word2 : str, n_results : int=10) -> List[str]: 
         """
-        Computes the midpoint between two words. Finds and returns the words in the vocab set 
+        Computes the midpoint between two words using word embeddings. 
+        Finds and returns the words in the vocab set 
         with the lowest cosine distance from the midpoint.
 
         word1, word2 -- word pair
