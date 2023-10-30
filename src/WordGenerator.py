@@ -8,6 +8,7 @@ import pandas as pd
 import numpy as np
 import scipy
 import os
+import nltk
 
 
 class WordGenerator():
@@ -28,7 +29,27 @@ class WordGenerator():
         self.data_file = data_file
         self.embeddings = pd.read_csv(os.path.join("data", data_file)).transpose().values
         self.vocab = list(pd.read_csv(os.path.join("data", vocab_file)).Word)
+        self.words = []
         print("Initialized.")
+    
+    @staticmethod
+    def tag_words(words : List[str]) -> Dict[str, List[str]]:
+        """
+        Tag words and return a dictionary grouped by tags, ie {tag : [words in tag]}
+
+        words -- list of words to be tagged
+        """
+        word_tags = nltk.pos_tag(words)
+        tag_groups = dict()
+        
+        for pair in word_tags:
+            word = pair[0]
+            tag = pair[1]
+            if tag_groups.get(tag):
+                tag_groups[tag].append(word)
+            else:
+                tag_groups.update({tag : [word]})
+        return tag_groups
     
     def generate_midpoint_words(self, word1 : str, word2 : str, n_results : int=10) -> List[str]: 
         """
@@ -53,11 +74,20 @@ class WordGenerator():
         sim_array_sorted = np.argsort(-sim_array).flatten() # gives sorted indices
         sim_array = np.flip(np.sort(sim_array)).flatten()
         closest_words = np.array([self.vocab[i] for i in sim_array_sorted])
-        return closest_words[:n_results]
-
+        closest_words = closest_words[:n_results]
+        self.words = closest_words
+        return closest_words
+    
     def __str__(self) -> str:
         """Returns string of location and size of generator's data source."""
         serialize = "WordGenerator" + f"\ndata source = '{self.data_file}'" + \
             f"\nsize = {len(self.embeddings)} words"
         return serialize
+    
+    if __name__ == "__main__":
+        # TODO clean 
+        tagged_words = tag_words(['melancholy', 'glum', 'depressing', 'depressed', 'sad', \
+                          'morose', 'unhappiness', 'depressive', 'miserable', 'dejected'])
+        print(f"Tagged words: {tagged_words}")
+        pass
     

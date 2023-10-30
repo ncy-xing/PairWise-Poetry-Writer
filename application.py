@@ -19,4 +19,6 @@ if __name__ == '__main__':
     w1 = sys.argv[1]
     w2 = sys.argv[2]
     closest_words = word_generator.generate_midpoint_words(w1, w2, 10)
-    print(f"midpoint words from '{w1}' and '{w2}': {closest_words}")
+
+    print(f"Midpoint words from '{w1}' and '{w2}': {closest_words}")
+    print(f"Tagged words: {word_generator.tag_words(closest_words)}")
