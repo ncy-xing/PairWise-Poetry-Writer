@@ -35,7 +35,7 @@ class WordGenerator():
     @staticmethod
     def tag_words(words : List[str]) -> Dict[str, List[str]]:
         """
-        Tag words and return a dictionary grouped by tags, ie {tag : [words in tag]}
+        Tag words and return words grouped by tags in a dictionary {tag : [words in tag]}. 
 
         words -- list of words to be tagged
         """
@@ -74,20 +74,28 @@ class WordGenerator():
         sim_array_sorted = np.argsort(-sim_array).flatten() # gives sorted indices
         sim_array = np.flip(np.sort(sim_array)).flatten()
         closest_words = np.array([self.vocab[i] for i in sim_array_sorted])
-        closest_words = closest_words[:n_results]
+
+        # Truncate results 
+        if len(closest_words) > n_results:
+            closest_words = closest_words[:n_results - 1]
         self.words = closest_words
         return closest_words
+    
+    def generate_word_groups(self, word1 : str, word2 : str, n_results : int=10) -> Dict[str, List[str]]: 
+        """
+        Generate and return tagged words based on a two given inspiring words. 
+        Returns words grouped by tags in a dictionary {tag : [words in tag]}.
+
+        word1, word2 -- word pair
+        """
+        # TODO make number of generated midpoint words a constant 
+        words = self.generate_midpoint_words(word1=word1, word2=word2, n_results=n_results)
+        return self.tag_words(words)
     
     def __str__(self) -> str:
         """Returns string of location and size of generator's data source."""
         serialize = "WordGenerator" + f"\ndata source = '{self.data_file}'" + \
             f"\nsize = {len(self.embeddings)} words"
+        serialize += "\nWord groups: "
         return serialize
-    
-    if __name__ == "__main__":
-        # TODO clean 
-        tagged_words = tag_words(['melancholy', 'glum', 'depressing', 'depressed', 'sad', \
-                          'morose', 'unhappiness', 'depressive', 'miserable', 'dejected'])
-        print(f"Tagged words: {tagged_words}")
-        pass
     

@@ -1,0 +1,18 @@
+Started Generator
+Initializing Word Generator...
+Initialized.
+WordGenerator
+data source = 'swow_associative_embeddings.csv'
+size = 12218 words
+Word groups: 
+('NN', ['ice', 'freeze', 'icy', 'icicle', 'igloo', 'colder', 'melt', 'defrost', 'freezer', 'icebox', 'frigid', 'iceberg', 'skate', 'winter', 'chill', 'snowball', 'skater', 'fire', 'heater', 'refrigerator', 'snowboard', 'scraper', 'burn', 'blaze', 'flame', 'ice hockey', 'sleet', 'emotionless', 'combustion', 'fridge', 'brimstone', 'fireplace', 'bonfire', 'parka', 'hearth', 'kindle', 'dragon', 'burner', 'flare'])
+('NNS', ['thaw', 'goosebumps', 'skis', 'dragons', 'sparks', 'mittens', 'ashes'])
+('RBR', ['glacier', 'lighter'])
+('JJ', ['frozen', 'arctic', 'cold', 'frosty', 'slushy', 'snowman', 'tundra', 'polar bear', 'extinguish', 'furnace', 'numb', 'northern', 'ignite', 'campsite', 'cool', 'smoky', 'warmer'])
+('VBG', ['melting', 'skating', 'freezing', 'cooling', 'chilling', 'air conditioning', 'burning', 'heating', 'skiing'])
+('NNP', ['Antarctic', 'South Pole', 'Popsicle', 'Alaska', 'North Pole', 'Nordic', 'Iceland', 'Norway', 'February', 'January', 'Sweden'])
+('RB', ['frost', 'chilly', 'shiver'])
+('VBZ', ['cooler', 'flames'])
+('VBP', ['snow', 'flint'])
+('VBD', ['frosted', 'stoke', 'burned', 'iced', 'melted', 'sled'])
+('VB', ['mitten'])

@@ -1,3 +1,0 @@
-python3 application.py ankle run 10
-python3 application.py blue sad 10
-python3 application.py fire ice 10
