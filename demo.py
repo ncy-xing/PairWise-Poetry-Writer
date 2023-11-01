@@ -35,12 +35,6 @@ if __name__ == '__main__':
     #     print (i)
 
     # Sentence Generation
-
-    # Sentence Generation
-    sentence_generator = SentenceGenerator(BASE_CFG) # TODO base cfg is a test
-    cfg = sentence_generator.cfg_to_string(BASE_CFG)
-    print(cfg)
-    from nltk import CFG
-    grammar = CFG.fromstring(cfg)
-    for sentence in generate(grammar, n=4):
-        print(' '.join(sentence))
+    sentence_generator = SentenceGenerator(None) # TODO base cfg is a test
+    test = sentence_generator.generate_sentences(5)
+    print(test)

@@ -4,9 +4,9 @@ Assignment: CSCI 3725 M7
 Date: 10-2023
 """
 from typing import *
-# from nltk.parse.generate import generate
-# from nltk import CFG
-# from constants import BASE_CFG
+from nltk.parse.generate import generate
+from nltk import CFG
+from .constants import BASE_CFG
 
 class SentenceGenerator():
     """
@@ -17,10 +17,16 @@ class SentenceGenerator():
     """
 
     def __init__(self, word_groups : Dict[str, List]) -> None:
-        self.cfg = {}
+        """
+        Initialize base CFG. Add given words from CFG and construct final grammar. 
+        """
+        self.cfg = BASE_CFG
+        # TODO merge given words into CFG 
+        self.grammar_string = self.cfg_to_string(BASE_CFG)
         pass
     
     def cfg_to_string(self, word_groups : Dict[str, List]) -> str:
+        # TODO comment
         cfg_string = ""
         for tag, transitions in word_groups.items():
             line = f"{tag} -> "
@@ -30,24 +36,19 @@ class SentenceGenerator():
         return cfg_string
     
     def parse_transition_element(self, element : List) -> str:
+        # TODO comment
         if type(element) == str:
             return f"'{element}'"
         return ' '.join(e for e in element)
     
+    def generate_sentences(self, n_results=5) -> List[str]:
+        sentences = []
+        grammar = CFG.fromstring(self.grammar_string)
+        for s in generate(grammar, n=n_results):
+            sentences.append(' '.join(s))
+        return sentences
+    
     if __name__ == "__main__":
-        # cfg = "S -> NP VP \n \
-        #     PP -> P NP \n \
-        #     NP -> Det N | Det N PP | 'I' \n \
-        #     VP -> V NP | VP PP \n \
-        #     Det -> 'an' | 'my' \n \
-        #     N -> 'elephant' | 'pajamas' \n \
-        #     V -> 'shot' \n \
-        #     P -> 'in'"
-        # grammar = CFG.fromstring(cfg)
-
-        
-        #   :param depth: The maximal depth of the generated tree.
-        # :param n: The maximum number of sentences to return.
         pass
         
 
