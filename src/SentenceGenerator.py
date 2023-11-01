@@ -7,13 +7,13 @@ from typing import *
 from nltk.parse.generate import generate
 from nltk import CFG
 from .constants import BASE_CFG
+from collections import Counter
 
 class SentenceGenerator():
     """
     SentenceGenerator builds a context-free grammar from given tagged words 
-    to generate grammatical sentences. It may supplement the given tagged words
-    to include words from its own template CFG, eg to include common stop words
-    such as 'the'.  
+    to generate grammatical, unpunctuated sentences. It may supplement the given tagged words
+    to include words from its own template CFG, eg to include common stop words such as 'the'.  
     """
 
     def __init__(self, word_groups : Dict[str, List]) -> None:
@@ -21,8 +21,14 @@ class SentenceGenerator():
         Initialize base CFG. Add given words from CFG and construct final grammar. 
         """
         self.cfg = BASE_CFG
-        # TODO merge given words into CFG 
+        for tag, words in word_groups.items():
+            if tag in self.cfg:
+                combined_words = self.cfg.get(tag) + words
+                self.cfg.update({tag : combined_words})
+            else:
+                self.cfg.update({tag : words})
         self.grammar_string = self.cfg_to_string(BASE_CFG)
+        print(self.grammar_string)
         pass
     
     def cfg_to_string(self, word_groups : Dict[str, List]) -> str:

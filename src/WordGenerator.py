@@ -46,9 +46,9 @@ class WordGenerator():
             word = pair[0]
             tag = pair[1]
             if tag_groups.get(tag):
-                tag_groups[tag].append(word)
+                tag_groups[tag].append(str(word))
             else:
-                tag_groups.update({tag : [word]})
+                tag_groups.update({tag : [str(word)]})
         return tag_groups
     
     def generate_midpoint_words(self, word1 : str, word2 : str, n_results : int=10) -> List[str]: 
@@ -96,6 +96,5 @@ class WordGenerator():
         """Returns string of location and size of generator's data source."""
         serialize = "WordGenerator" + f"\ndata source = '{self.data_file}'" + \
             f"\nsize = {len(self.embeddings)} words"
-        serialize += "\nWord groups: "
         return serialize
     

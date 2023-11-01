@@ -16,25 +16,25 @@ if __name__ == '__main__':
     """
     Demo script which walks through all steps of poetry processing. 
     """
-    # n_results = 10
-    # if len(sys.argv) < 3:
-    #     print("Usage: word1 word2 [num_results]")
-    #     sys.exit()
-    # if len(sys.argv) == 4:
-    #     n_results = int(sys.argv[3])
+    n_results = 10
+    if len(sys.argv) < 3:
+        print("Usage: word1 word2 [num_results]")
+        sys.exit()
+    if len(sys.argv) == 4:
+        n_results = int(sys.argv[3])
 
     # Word generation
-    # print("Started Generator")
-    # word_generator = WordGenerator("swow_associative_embeddings.csv", "vocab.csv")
-    # print(word_generator)
+    print("Started Generator")
+    word_generator = WordGenerator("swow_associative_embeddings.csv", "vocab.csv")
+    print(word_generator)
 
-    # w1 = sys.argv[1]
-    # w2 = sys.argv[2]
-    # groups = word_generator.generate_word_groups(w1, w2, n_results)
-    # for i in groups.items():
-    #     print (i)
+    w1 = sys.argv[1]
+    w2 = sys.argv[2]
+    groups = word_generator.generate_word_groups(w1, w2, n_results)
+    for i in groups.items():
+        print (i)
 
     # Sentence Generation
-    sentence_generator = SentenceGenerator(None) # TODO base cfg is a test
+    sentence_generator = SentenceGenerator(groups)
     test = sentence_generator.generate_sentences(5)
     print(test)

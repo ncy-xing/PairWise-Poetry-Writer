@@ -1,34 +1,14 @@
-        # cfg = "S -> NP VP \n \
-        #     PP -> P NP \n \
-        #     NP -> Det N | Det N PP | 'I' \n \
-        #     VP -> V NP | VP PP \n \
-        #     Det -> 'an' | 'my' \n \
-        #     N -> 'elephant' | 'pajamas' \n \
-        #     V -> 'shot' \n \
-        #     P -> 'in'"
-
 BASE_CFG = {
     "S" : [["NP", "VP"]],
     "NP" : [["DT", "NN"], ["NN"]],
-    "VP" : [["VB"], ["VB", "NN"]],
+    "VP" : [["VB"], ["VB", "NN"], ["VBD"], ["VBD", "NN"], 
+            ["VBG"], ["VDG", "NN"], ["VBN"], ["VBN", "NN"],
+            ["VBP"], ["VBP", "NN"], ["VBZ"], ["VBZ", "NN"]
+        ],      
     "PP" : [["IN", "NP"]],
-    "DT" : ["the"],
-    "NN" : ["dog", "cat", "tree"],
+    "DT" : ["the", "this", "that", "these", "those", "my", "your"],
     "IN" : ["on"],
-    "VB" : ["chased", "perched"]
 }
-
-# Infinite
-# BASE_CFG = {
-#     "S" : ["NP VP"],
-#     "NP" : ["DT NN", "NP NN"],
-#     "VP" : ["VB", "VB NN", "VP PP"],
-#     "PP" : ["IN NP"],
-#     "DT" : ["the"],
-#     "NN" : ["dog", "cat", "tree"],
-#     "IN" : ["on"],
-#     "VB" : ["chased", "perched"]
-# }
 
 # VB verb, base form take
 # VBD verb, past tense took
