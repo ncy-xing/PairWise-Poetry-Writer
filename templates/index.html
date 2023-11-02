@@ -6,6 +6,21 @@
     </head>
     
     <body>
-        
+        <script src="../js/tts.js"></script>
+        <script src="../js/listen.js"></script>
+        <button id="enable-tts-button" onclick="enableTTS()">Unleash the sound</button>
+        <button id="start-listen-button">Start</button>
+        <button id="stop-listen-button" onclick="enableTTS()">Stop</button>
+        <h2>Final heard text</h2>
+        <span id="heard-text"></span>
+        <h2>Intermediate heard text</h2>
+        <span id="heard-in-progress-text"></span>
     </body>
 </html>
+
+<!--
+    Fast localhost test: 
+    cd to dir
+    python3 -m http.server
+    go to localhost:port
+-->

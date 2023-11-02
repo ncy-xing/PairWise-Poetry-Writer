@@ -36,5 +36,5 @@ if __name__ == '__main__':
 
     # Sentence Generation
     sentence_generator = SentenceGenerator(groups)
-    test = sentence_generator.generate_sentences(5)
+    test = sentence_generator.generate_sentences(15)
     print(test)
