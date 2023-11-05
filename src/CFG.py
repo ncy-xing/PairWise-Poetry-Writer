@@ -1,10 +1,11 @@
 from collections import defaultdict
 import random
 import os
+
 # TODO comment
 class CFG(object):
     """
-    Simple CFG implementation adapted from Eli Bendersky. 
+    Simple CFG implementation. Initial code adapted from Eli Bendersky. 
     """
     def __init__(self, filename : str):
         self.prod = defaultdict(list)
@@ -31,6 +32,14 @@ class CFG(object):
         for prod in prods:
             self.prod[lhs].append(tuple(prod.split()))
 
+    def add_prod(self, lhs, rhs):
+        if lhs in self.prod:
+            for element in rhs:
+                self.prod[lhs].append((element,))
+        else:
+            self.prod.update({lhs : [(element) for element in rhs]})
+        print(self.prod)
+
     def gen_random(self, symbol):
         """ Generate a random sentence from the
             grammar, starting with the given
@@ -53,5 +62,7 @@ class CFG(object):
 if __name__ == "__main__":
     print(os.getcwd())
     grammar = CFG("base.cfg")
+    grammar.add_prod("N", ["muffin"])
+    grammar.add_prod("NN", ["this", "is", "a test"])
     for i in range(5):
         print(grammar.gen_random("S"))
