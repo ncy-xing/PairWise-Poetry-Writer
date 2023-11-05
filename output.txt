@@ -18,3 +18,77 @@ Word groups:
 ('VB', ['mitten'])
 
 
+Started Generator
+Initializing Word Generator...
+Initialized.
+WordGenerator
+data source = 'swow_associative_embeddings.csv'
+size = 12218 words
+('NN', ['ice', 'freeze', 'icy', 'icicle', 'igloo', 'colder', 'melt', 'defrost', 'freezer', 'icebox', 'frigid', 'iceberg', 'skate', 'winter', 'chill', 'snowball', 'skater', 'fire', 'heater', 'refrigerator', 'snowboard', 'scraper', 'burn', 'blaze', 'flame', 'ice hockey', 'sleet', 'emotionless', 'combustion', 'fridge', 'brimstone', 'fireplace', 'bonfire', 'parka', 'hearth', 'kindle', 'dragon', 'burner', 'flare'])
+('NNS', ['thaw', 'goosebumps', 'skis', 'dragons', 'sparks', 'mittens', 'ashes'])
+('RBR', ['glacier', 'lighter'])
+('JJ', ['frozen', 'arctic', 'cold', 'frosty', 'slushy', 'snowman', 'tundra', 'polar bear', 'extinguish', 'furnace', 'numb', 'northern', 'ignite', 'campsite', 'cool', 'smoky', 'warmer'])
+('VBG', ['melting', 'skating', 'freezing', 'cooling', 'chilling', 'air conditioning', 'burning', 'heating', 'skiing'])
+('NNP', ['Antarctic', 'South Pole', 'Popsicle', 'Alaska', 'North Pole', 'Nordic', 'Iceland', 'Norway', 'February', 'January', 'Sweden'])
+('RB', ['frost', 'chilly', 'shiver'])
+('VBZ', ['cooler', 'flames'])
+('VBP', ['snow', 'flint'])
+('VBD', ['frosted', 'stoke', 'burned', 'iced', 'melted', 'sled'])
+('VB', ['mitten'])
+S -> NP VP
+NP -> DT NN | NN
+VP -> VB | VB NN | VBD | VBD NN | VBG | VDG NN | VBN | VBN NN | VBP | VBP NN | VBZ | VBZ NN
+PP -> IN NP
+DT -> 'the' | 'this' | 'that' | 'these' | 'those' | 'my' | 'your'
+IN -> 'on'
+NN -> 'ice' | 'freeze' | 'icy' | 'icicle' | 'igloo' | 'colder' | 'melt' | 'defrost' | 'freezer' | 'icebox' | 'frigid' | 'iceberg' | 'skate' | 'winter' | 'chill' | 'snowball' | 'skater' | 'fire' | 'heater' | 'refrigerator' | 'snowboard' | 'scraper' | 'burn' | 'blaze' | 'flame' | 'ice hockey' | 'sleet' | 'emotionless' | 'combustion' | 'fridge' | 'brimstone' | 'fireplace' | 'bonfire' | 'parka' | 'hearth' | 'kindle' | 'dragon' | 'burner' | 'flare'
+NNS -> 'thaw' | 'goosebumps' | 'skis' | 'dragons' | 'sparks' | 'mittens' | 'ashes'
+RBR -> 'glacier' | 'lighter'
+JJ -> 'frozen' | 'arctic' | 'cold' | 'frosty' | 'slushy' | 'snowman' | 'tundra' | 'polar bear' | 'extinguish' | 'furnace' | 'numb' | 'northern' | 'ignite' | 'campsite' | 'cool' | 'smoky' | 'warmer'
+VBG -> 'melting' | 'skating' | 'freezing' | 'cooling' | 'chilling' | 'air conditioning' | 'burning' | 'heating' | 'skiing'
+NNP -> 'Antarctic' | 'South Pole' | 'Popsicle' | 'Alaska' | 'North Pole' | 'Nordic' | 'Iceland' | 'Norway' | 'February' | 'January' | 'Sweden'
+RB -> 'frost' | 'chilly' | 'shiver'
+VBZ -> 'cooler' | 'flames'
+VBP -> 'snow' | 'flint'
+VBD -> 'frosted' | 'stoke' | 'burned' | 'iced' | 'melted' | 'sled'
+VB -> 'mitten'
+
+['the ice mitten', 'the ice mitten ice', 'the ice mitten freeze', 'the ice mitten icy', 'the ice mitten icicle', 'the ice mitten igloo', 'the ice mitten colder', 'the ice mitten melt', 'the ice mitten defrost', 'the ice mitten freezer', 'the ice mitten icebox', 'the ice mitten frigid', 'the ice mitten iceberg', 'the ice mitten skate', 'the ice mitten winter']
+
+
+Started Generator
+Initializing Word Generator...
+Initialized.
+WordGenerator
+data source = 'swow_associative_embeddings.csv'
+size = 12218 words
+('NN', ['cheetah', 'leopard', 'cat', 'puma', 'whisker', 'feline', 'kitty', 'meow', 'stray', 'purr', 'paw', 'puss', 'pounce', 'spay', 'claws', 'panther', 'run', 'tiger', 'tail', 'curiosity', 'frisky', 'claw', 'sprint', 'tame', 'vet', 'lap', 'furry', 'jog', 'fur', 'flee', 'marathon', 'runner', 'pace', 'dog', 'pat', 'breed', 'keep up', 'agility', 'lion', 'leash', 'hyena', 'growl', 'wag', 'chase', 'dash', 'woof', 'alley', 'race', 'husky', 'hound', 'canine', 'treadmill', 'beagle', 'pointer', 'bulldog', 'tracksuit', 'race car', 'bolt'])
+('NNS', ['whiskers', 'cats', 'pets', 'dogs', 'lions', 'animals', 'spots', 'rabbits', 'rabies'])
+('VBP', ['cougar', 'jogger', 'coyote', 'animal'])
+('VB', ['kitten'])
+('JJ', ['paws', 'feral', 'pet', 'pussy', 'jaguar', 'neuter', 'puppy', 'veterinarian', 'sleek', 'fluffy', 'flea', 'pup', 'dalmatian', 'poodle', 'pant', 'snoopy'])
+('NNP', ['Tom', 'Labrador'])
+('VBZ', ['kittens', 'tails'])
+('VBD', ['ran', 'spotted'])
+('VBG', ['running', 'jogging', 'barking', 'walking'])
+('RB', ['fast'])
+S -> NP VP
+NP -> DT NN | NN
+VP -> VB | VB NN | VBD | VBD NN | VBG | VDG NN | VBN | VBN NN | VBP | VBP NN | VBZ | VBZ NN
+PP -> IN NP
+DT -> 'the' | 'this' | 'that' | 'these' | 'those' | 'my' | 'your'
+IN -> 'on'
+NN -> 'cheetah' | 'leopard' | 'cat' | 'puma' | 'whisker' | 'feline' | 'kitty' | 'meow' | 'stray' | 'purr' | 'paw' | 'puss' | 'pounce' | 'spay' | 'claws' | 'panther' | 'run' | 'tiger' | 'tail' | 'curiosity' | 'frisky' | 'claw' | 'sprint' | 'tame' | 'vet' | 'lap' | 'furry' | 'jog' | 'fur' | 'flee' | 'marathon' | 'runner' | 'pace' | 'dog' | 'pat' | 'breed' | 'keep up' | 'agility' | 'lion' | 'leash' | 'hyena' | 'growl' | 'wag' | 'chase' | 'dash' | 'woof' | 'alley' | 'race' | 'husky' | 'hound' | 'canine' | 'treadmill' | 'beagle' | 'pointer' | 'bulldog' | 'tracksuit' | 'race car' | 'bolt'
+NNS -> 'whiskers' | 'cats' | 'pets' | 'dogs' | 'lions' | 'animals' | 'spots' | 'rabbits' | 'rabies'
+VBP -> 'cougar' | 'jogger' | 'coyote' | 'animal'
+VB -> 'kitten'
+JJ -> 'paws' | 'feral' | 'pet' | 'pussy' | 'jaguar' | 'neuter' | 'puppy' | 'veterinarian' | 'sleek' | 'fluffy' | 'flea' | 'pup' | 'dalmatian' | 'poodle' | 'pant' | 'snoopy'
+NNP -> 'Tom' | 'Labrador'
+VBZ -> 'kittens' | 'tails'
+VBD -> 'ran' | 'spotted'
+VBG -> 'running' | 'jogging' | 'barking' | 'walking'
+RB -> 'fast'
+
+['the cheetah kitten', 'the cheetah kitten cheetah', 'the cheetah kitten leopard', 'the cheetah kitten cat', 'the cheetah kitten puma', 'the cheetah kitten whisker', 'the cheetah kitten feline', 'the cheetah kitten kitty', 'the cheetah kitten meow', 'the cheetah kitten stray', 'the cheetah kitten purr', 'the cheetah kitten paw', 'the cheetah kitten puss', 'the cheetah kitten pounce', 'the cheetah kitten spay']
+
+

@@ -7,7 +7,7 @@ BASE_CFG = {
         ],      
     "PP" : [["IN", "NP"]],
     "DT" : ["the", "this", "that", "these", "those", "my", "your"],
-    "IN" : ["on"],
+    "IN" : ["on"]
 }
 
 # CC coordinating conjunction
