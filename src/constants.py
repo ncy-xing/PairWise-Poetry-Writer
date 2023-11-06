@@ -1,5 +1,5 @@
 BASE_CFG = "base.cfg"
-START_SYMBOL = "C"
+START_SYMBOL = "S"
 
 # BASE_CFG = {
 #     "S" : [["NP", "VP"]],

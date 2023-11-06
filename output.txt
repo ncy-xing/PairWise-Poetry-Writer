@@ -4,37 +4,37 @@ Initialized.
 Initializing Sentence generator...
 S -> C CC C
 C -> NP VP
+CC -> for | and | nor | but | or | yet | so
 NP -> DT JJ NN | DT NN
 PP -> IN NP
 VP -> VB | VB NP | PP
-DT -> the | a | an | this | these | that | those | my | your | his | her | their
-NN -> man | park | dog | flight | kill | aviation | fly | plane | swatter | aircraft | airline | murder | execute | take off | jet | pilot | assassination | helicopter | co-pilot | bomber | landing | homicide | airport | glide | propeller | hijack | genocide | airship | massacre | flyer | mockingbird | annihilate | eradicate | hover | slaughter | swoop | execution | killer | strangle | strangulation | suicide | destroy | tarmac | murderer | vulture | flighty | flap | slayer | first class | hawk | falcon | carrion | elimination | chopper | lynch | pigeon | migration | ruin | arrival | sparrow | radar | air force | bluejay | pheasant | lark | magpie
-IN -> in | with | on | wipe out
-JJ -> airplane | stewardess | cockpit | exterminate | flight attendant | kite | attendant | steward | die | terrorist | bird | eject | terminal | lethal
-VB -> VBD | VBG | VBN | VBP | VBZ | soar | eliminate
-VBD -> slay | flew | killed
-VBG -> flying | soaring | wing | killing | traveling
-VBN -> 
-VBP -> parachute | assassin | decimate | eagle | obliterate
-VBZ -> 
-CC -> for | and | nor | but | or | yet | so
-JJR -> 
-JJS -> 
+DT -> the | a | an | this | these | that | those | my | your | his | her | their | moth
+NN -> fly | slay | execute | murder | assassination | flight | mockingbird | aviation | glide | assassin | massacre | eradicate | genocide | annihilate | swoop | airplane | hover | helicopter | plane | slaughter | vulture | aircraft | killer | execution | destroy | parachute | strangle | suicide | take off | flutter | airline | strangulation | hawk | pilot | jet | murderer | bomber | carrion | bird | prey | cockpit | pigeon | stewardess | slayer | propeller | sparrow | flighty | bluejay | dragonfly | magpie | landing | finch | flyer | lark | heron | crane | elimination | airship | parakeet | chirp | hijack | budgie | blackbird | robin | ruin | peacock | squawk | crow | airport | tweet | parrot | steward | attendant | handgun | perch | death | cuckoo | woodpecker | gull | swan | destruct | migration | chopper | smother | feather | stork | predator | asphyxiate | fowl | birdhouse | hummingbird | drone | demolition | scavenger | housefly | birdie | tarmac | machine gun | choke | erase | violence | destruction | mortality | radar | weapon | butterfly | victim | suffocate | first class | terminate | extinction | carnage | maim | shoot | migrate | mosquito | cage | air force | morbid | fighter | suffocation | bug | morgue | martyr | hunt | hovercraft | shotgun | smash | blimp | propel | sky | sacrifice | purge | bullet | heart attack | warfare | carrier | reaper | tit | assault | missile | cockroach | gun | scythe | beetle | roach | shooter | hunter | stab | rotor | throttle | shot | arrival | migrant | apocalypse | rampage | get rid of | cremate | cremation | doom | angel | damage | excise | ammo | bazooka | ammunition | decomposition | pistol | zap | battlefield | terrorism | catapult | raid | life | blaster | tick | gunpowder | decay | terminator | corpse | hanger | claw | erasure | departure | coffin | dragon | cocoon | termination | revolver | cricket | attack | superhero | mite | gravestone | altitude | mafia | widow | croak | holocaust | bloody | spoil | threat | ladybug | mobster | roadkill | loss | harpoon | devastation | infestation | burial | gang | neck | trigger | bat | mob | hostess | passenger | crush | holster | louse | rot | backspace | throat | tombstone | air | flea | war | grasshopper | scarecrow | bulldozer | scorpion | condemn | mock | mourn | rape | joystick | wither | artillery | graveyard | violate | downfall | crash | chick | cannon | extract | survival | treason | mace | reincarnation | brutality | destination | conquer | abortion | discharge | wreck | baggage | cape | strip | freedom | cancel | crime | rapist | zombie | traveler | chainsaw | bill | pillage | duck | tragedy | bumblebee | defeat | grenade | hostage | headstone | threaten | stalker | finality | luggage | bugger | sociopath | turkey | worm | flapper | colorful | sword | dangle | canon | nuisance | survivor | messenger | leukemia | disintegrate | blood | butcher | laser | critter | swarm | balloon | navigator | gruesome | tomb | scrape | pollute | hood | sickle | suitcase | zipper
+IN -> in | with | on | at | of | to | wipe out | tear down | put down
+JJ -> exterminate | flew | homicide | kite | co-pilot | falcon | pheasant | flight attendant | lynch | beak | pelican | toucan | nightingale | emu | demolish | chickadee | ostrich | partridge | swallow | perish | canary | seagull | geese | rid | cardinal | terrorist | fatal | destructive | mortal | vanquish | insect | delete | songbird | sniper | serial | terminal | disarm | hang | dead | ant | goose | noose | levitate | termite | earwig | funeral | hung | squish | violent | decompose | early | left wing | centipede | splat | antenna | pesky | urn | travel | exoskeleton | machete | flat | extinct | dagger | free | spear | brutal | inevitable | lifeless | high | slash | survive | memorial | hangman | leech | immortal | plague | cemetery | deteriorate | blue | angelic | dangerous | undo | peep | ambush | aim | alive | lofty
+VB -> VBD | VBG | VBN | VBP | VBZ | kill | soar | eliminate | remove
+VBD -> killed | dove | lethal | maggot | rook | caterpillar | armed | deceased | inclined | buried | stroke | shred
+VBG -> flying | wing | soaring | killing | shooting | traveling | dying | hanging | choking | hunting | mourning | firing | passing | arriving | dropping
+VBN -> raven | thug | delayed
+VBP -> eagle | decimate | flap | obliterate | die | quail | owl | eject | twitter | horsefly | penguin | expire | parasite | rifle | casket | gangster | overhead | firefly | crest | grave | spree
+VBZ -> crows | gallows | termites | remains | graves | clouds | vigilante
+JJR -> swatter
+JJS -> nest | pest
 LS -> 
 MD -> 
-NNS -> planes | wings | birds | flies
-NNP -> 
+NNS -> wings | flies | birds | planes | feathers | insects | bugs | wars | ants | angels | controls | weapons | guns | zombies | ducks | bodies | skies | customs | hatchet | ashes
+NNP -> Phoenix | Hawking | Superman | Civil War | Zeppelin | Batman
 NNPS -> 
 POS -> 
 PRP -> 
-RB -> runway
+RB -> runway | flamingo | deadly | freely | nuke | watcher | crawly | anthill
 RBR -> 
 RBS -> 
-RP -> 
-FW -> prey
+RP -> off
+FW -> ladybird
 
-those terminal flyer soar their glide 
-the man eliminate 
-his elimination wipe out those take off 
-his exterminate elimination in this assassination 
-this strangle decimate these magpie 
+their scythe kill yet their blue death wipe out their cemetery rapist 
+his bazooka firing their choke yet her exoskeleton hostage hanging 
+your messenger with this spear critter but this geese angel eliminate 
+a chirp traveling a wither for her infestation remove 
+her throttle kill but his annihilate in his chickadee drone 
