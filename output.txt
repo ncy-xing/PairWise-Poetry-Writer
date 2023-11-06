@@ -3,38 +3,87 @@ Initializing Word Generator...
 Initialized.
 Initializing Sentence generator...
 S -> C CC C
-C -> NP VP
-CC -> for | and | nor | but | or | yet | so
-NP -> DT JJ NN | DT NN
+C -> NP VP | EX NP | EX NP VP
+EX -> there is
+NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT
 PP -> IN NP
-VP -> VB | VB NP | PP
-DT -> the | a | an | this | these | that | those | my | your | his | her | their | moth
-NN -> fly | slay | execute | murder | assassination | flight | mockingbird | aviation | glide | assassin | massacre | eradicate | genocide | annihilate | swoop | airplane | hover | helicopter | plane | slaughter | vulture | aircraft | killer | execution | destroy | parachute | strangle | suicide | take off | flutter | airline | strangulation | hawk | pilot | jet | murderer | bomber | carrion | bird | prey | cockpit | pigeon | stewardess | slayer | propeller | sparrow | flighty | bluejay | dragonfly | magpie | landing | finch | flyer | lark | heron | crane | elimination | airship | parakeet | chirp | hijack | budgie | blackbird | robin | ruin | peacock | squawk | crow | airport | tweet | parrot | steward | attendant | handgun | perch | death | cuckoo | woodpecker | gull | swan | destruct | migration | chopper | smother | feather | stork | predator | asphyxiate | fowl | birdhouse | hummingbird | drone | demolition | scavenger | housefly | birdie | tarmac | machine gun | choke | erase | violence | destruction | mortality | radar | weapon | butterfly | victim | suffocate | first class | terminate | extinction | carnage | maim | shoot | migrate | mosquito | cage | air force | morbid | fighter | suffocation | bug | morgue | martyr | hunt | hovercraft | shotgun | smash | blimp | propel | sky | sacrifice | purge | bullet | heart attack | warfare | carrier | reaper | tit | assault | missile | cockroach | gun | scythe | beetle | roach | shooter | hunter | stab | rotor | throttle | shot | arrival | migrant | apocalypse | rampage | get rid of | cremate | cremation | doom | angel | damage | excise | ammo | bazooka | ammunition | decomposition | pistol | zap | battlefield | terrorism | catapult | raid | life | blaster | tick | gunpowder | decay | terminator | corpse | hanger | claw | erasure | departure | coffin | dragon | cocoon | termination | revolver | cricket | attack | superhero | mite | gravestone | altitude | mafia | widow | croak | holocaust | bloody | spoil | threat | ladybug | mobster | roadkill | loss | harpoon | devastation | infestation | burial | gang | neck | trigger | bat | mob | hostess | passenger | crush | holster | louse | rot | backspace | throat | tombstone | air | flea | war | grasshopper | scarecrow | bulldozer | scorpion | condemn | mock | mourn | rape | joystick | wither | artillery | graveyard | violate | downfall | crash | chick | cannon | extract | survival | treason | mace | reincarnation | brutality | destination | conquer | abortion | discharge | wreck | baggage | cape | strip | freedom | cancel | crime | rapist | zombie | traveler | chainsaw | bill | pillage | duck | tragedy | bumblebee | defeat | grenade | hostage | headstone | threaten | stalker | finality | luggage | bugger | sociopath | turkey | worm | flapper | colorful | sword | dangle | canon | nuisance | survivor | messenger | leukemia | disintegrate | blood | butcher | laser | critter | swarm | balloon | navigator | gruesome | tomb | scrape | pollute | hood | sickle | suitcase | zipper
-IN -> in | with | on | at | of | to | wipe out | tear down | put down
-JJ -> exterminate | flew | homicide | kite | co-pilot | falcon | pheasant | flight attendant | lynch | beak | pelican | toucan | nightingale | emu | demolish | chickadee | ostrich | partridge | swallow | perish | canary | seagull | geese | rid | cardinal | terrorist | fatal | destructive | mortal | vanquish | insect | delete | songbird | sniper | serial | terminal | disarm | hang | dead | ant | goose | noose | levitate | termite | earwig | funeral | hung | squish | violent | decompose | early | left wing | centipede | splat | antenna | pesky | urn | travel | exoskeleton | machete | flat | extinct | dagger | free | spear | brutal | inevitable | lifeless | high | slash | survive | memorial | hangman | leech | immortal | plague | cemetery | deteriorate | blue | angelic | dangerous | undo | peep | ambush | aim | alive | lofty
-VB -> VBD | VBG | VBN | VBP | VBZ | kill | soar | eliminate | remove
-VBD -> killed | dove | lethal | maggot | rook | caterpillar | armed | deceased | inclined | buried | stroke | shred
-VBG -> flying | wing | soaring | killing | shooting | traveling | dying | hanging | choking | hunting | mourning | firing | passing | arriving | dropping
-VBN -> raven | thug | delayed
-VBP -> eagle | decimate | flap | obliterate | die | quail | owl | eject | twitter | horsefly | penguin | expire | parasite | rifle | casket | gangster | overhead | firefly | crest | grave | spree
-VBZ -> crows | gallows | termites | remains | graves | clouds | vigilante
+VP -> VB | VB PP | ADV VB | ADV VB PP
+ADV -> RB | RBR | RBS
+DT -> the | a | an | this | these | that | those | PRP
+PRP -> my | his | her | their | your | POS
+NN -> fly | slay | execute | murder | assassination | flight | mockingbird | aviation | glide | assassin | massacre | eradicate | genocide | annihilate | swoop | airplane | hover | helicopter | plane | slaughter | vulture | aircraft | killer | execution | destroy | parachute | strangle | suicide | take off | flutter | airline | strangulation | hawk | pilot | jet | murderer | bomber | carrion | bird | prey | cockpit | pigeon | stewardess | slayer | propeller | sparrow | flighty | bluejay | dragonfly | magpie | landing | finch | flyer | lark | heron | crane | elimination | airship | parakeet | chirp | hijack | budgie | blackbird | robin
+IN -> in | with | on | after | although | as | as if | as long as | because | before | despite | even if | even though | if | in order that | rather than | since | so that | that | though | unless | until | when | where | whereas | whether | while | wipe out
+JJ -> JJR | JJS | exterminate | flew | homicide | kite | co-pilot | falcon | pheasant | flight attendant | lynch | beak | pelican | toucan | nightingale
+VB -> VBD | VBG | VBN | VBP | VBZ | kill | soar | eliminate
+VBD -> killed
+VBG -> flying | wing | soaring | killing
+VBN -> 
+VBP -> eagle | decimate | flap | obliterate | die | quail
+VBZ -> 
+CC -> for | and | nor | but | or | yet | so
 JJR -> swatter
-JJS -> nest | pest
+JJS -> nest
 LS -> 
 MD -> 
-NNS -> wings | flies | birds | planes | feathers | insects | bugs | wars | ants | angels | controls | weapons | guns | zombies | ducks | bodies | skies | customs | hatchet | ashes
-NNP -> Phoenix | Hawking | Superman | Civil War | Zeppelin | Batman
+NNS -> wings | flies | birds | planes | feathers
+NNP -> 
 NNPS -> 
 POS -> 
-PRP -> 
-RB -> runway | flamingo | deadly | freely | nuke | watcher | crawly | anthill
+RB -> 
 RBR -> 
 RBS -> 
-RP -> off
-FW -> ladybird
+RP -> 
+PDT -> 
 
-their scythe kill yet their blue death wipe out their cemetery rapist 
-his bazooka firing their choke yet her exoskeleton hostage hanging 
-your messenger with this spear critter but this geese angel eliminate 
-a chirp traveling a wither for her infestation remove 
-her throttle kill but his annihilate in his chickadee drone 
+Generating sentences...
+there is the exterminate planes yet 
+there is eliminate but flying 
+there is those hover kill until the flight attendant yet there is an dragonfly 
+so that those assassin yet there is your strangulation 
+those kill in the hijack yet there is 
+
+
+
+Started Generator
+Initializing Word Generator...
+Initialized.
+Initializing Sentence generator...
+S -> C CC C
+C -> NP VP | EX NP | EX NP VP
+EX -> there is
+NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT
+PP -> IN NP
+VP -> VB | VB PP | ADV VB | ADV VB PP
+ADV -> RB | RBR | RBS
+DT -> the | a | an | this | these | that | those | PRP
+PRP -> my | his | her | their | your | POS
+NN -> ice | freeze | icy | icicle | igloo | colder | melt | defrost | freezer | icebox | frigid | iceberg | skate | winter | chill | snowball | skater | fire | heater | refrigerator | snowboard | scraper | burn | blaze | flame | ice hockey | sleet | emotionless | combustion | fridge | brimstone | fireplace | bonfire | parka | hearth | kindle | dragon | burner | flare
+IN -> in | with | on | after | although | as | as if | because | before | despite | even if | even though | if | in order that | rather than | since | so that | that | though | unless | until | when | where | whereas | whether | while
+JJ -> JJR | JJS | frozen | arctic | cold | frosty | slushy | snowman | tundra | polar bear | extinguish | furnace | numb | northern | ignite | campsite | cool | smoky | warmer
+VB -> VBD | VBG | VBN | VBP | VBZ | mitten
+VBD -> frosted | stoke | burned | iced | melted | sled
+VBG -> melting | skating | freezing | cooling | chilling | air conditioning | burning | heating | skiing
+VBN -> 
+VBP -> snow | flint
+VBZ -> cooler | flames
+CC -> for | and | nor | but | or | yet | so
+JJR -> 
+JJS -> 
+LS -> 
+MD -> 
+NNS -> thaw | goosebumps | skis | dragons | sparks | mittens | ashes
+NNP -> Antarctic | South Pole | Popsicle | Alaska | North Pole | Nordic | Iceland | Norway | February | January | Sweden
+NNPS -> 
+POS -> 
+RB -> frost | chilly | shiver
+RBR -> glacier | lighter
+RBS -> 
+RP -> 
+PDT -> 
+
+Generating sentences...
+North Pole frost snow with the furnace goosebumps so there is these winter 
+as long as that frozen goosebumps but her mittens flames 
+there is that skis or there is that arctic skiing on that ashes 
+there is an ignite mittens air conditioning but there is South Pole 
+glacier frosted yet there is the mittens sled unless these polar bear ashes 

@@ -58,11 +58,15 @@ class CFG(object):
         """
         sentence = ''
 
+        if len(self.prod[symbol]) == 0:
+            return ""
+
         # select one production of this symbol randomly
-        rand_prod = ""
-        while True:
+        while True: 
             rand_prod = random.choice(self.prod[symbol])
-            if len(rand_prod) != 0:
+            if(rand_prod in self.prod) and len(self.prod[rand_prod]) == 0: 
+                del self.prod[rand_prod]
+            else:
                 break
 
         for sym in rand_prod:

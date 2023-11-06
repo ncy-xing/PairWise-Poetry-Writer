@@ -35,5 +35,7 @@ if __name__ == '__main__':
     sentence_gen = SentenceGenerator()
     sentence_gen.add_word_groups(groups)
     print(sentence_gen.get_cfg())
+
+    print("Generating sentences...")
     for i in sentence_gen.generate_sentences(5):
         print(i)
