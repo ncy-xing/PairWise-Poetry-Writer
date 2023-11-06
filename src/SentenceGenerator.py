@@ -4,55 +4,34 @@ Assignment: CSCI 3725 M7
 Date: 10-2023
 """
 from typing import *
-from nltk.parse.generate import generate
-from nltk import CFG
-from .constants import BASE_CFG
-from collections import Counter
+from .constants import BASE_CFG, START_SYMBOL
+from .CFG import CFG
 
 class SentenceGenerator():
     """
     SentenceGenerator builds a context-free grammar from given tagged words 
-    to generate grammatical, unpunctuated sentences. It may supplement the given tagged words
-    to include words from its own template CFG, eg to include common stop words such as 'the'.  
+    to generate grammatical, unpunctuated sentences.  
     """
 
-    def __init__(self, word_groups : Dict[str, List]) -> None:
+    def __init__(self) -> None:
         """
         Initialize base CFG. Add given words from CFG and construct final grammar. 
         """
-        self.cfg = BASE_CFG
-        for tag, words in word_groups.items():
-            if tag in self.cfg:
-                combined_words = self.cfg.get(tag) + words
-                self.cfg.update({tag : combined_words})
-            else:
-                self.cfg.update({tag : words})
-        self.grammar_string = self.cfg_to_string(BASE_CFG)
-        print(self.grammar_string)
-        pass
+        print("Initializing Sentence generator...")
+        self.cfg = CFG(BASE_CFG)
     
-    def cfg_to_string(self, word_groups : Dict[str, List]) -> str:
-        # TODO comment
-        cfg_string = ""
-        for tag, transitions in word_groups.items():
-            line = f"{tag} -> "
-            line += ' | '.join([self.parse_transition_element(t) for t in transitions])
-            line += "\n"
-            cfg_string += line
-        return cfg_string
+    def add_word_groups(self, word_groups : Dict[str, List]) -> None:
+        for symbol, transitions in word_groups.items():
+            self.cfg.add_prod(symbol, transitions)
+
+    def generate_sentences(self, n : int) -> List[str]:
+        result = []
+        for i in range(n):
+            result.append(self.cfg.gen_random(START_SYMBOL))
+        return result
     
-    def parse_transition_element(self, element : List) -> str:
-        # TODO comment
-        if type(element) == str:
-            return f"'{element}'"
-        return ' '.join(e for e in element)
-    
-    def generate_sentences(self, n_results=5) -> List[str]:
-        sentences = []
-        grammar = CFG.fromstring(self.grammar_string)
-        for s in generate(grammar, n=n_results):
-            sentences.append(' '.join(s))
-        return sentences
+    def get_cfg(self) -> str:
+        return str(self.cfg)
     
     if __name__ == "__main__":
         pass

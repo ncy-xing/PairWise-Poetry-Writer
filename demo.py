@@ -26,15 +26,14 @@ if __name__ == '__main__':
     # Word generation
     print("Started Generator")
     word_generator = WordGenerator("swow_associative_embeddings.csv", "vocab.csv")
-    print(word_generator)
 
     w1 = sys.argv[1]
     w2 = sys.argv[2]
     groups = word_generator.generate_word_groups(w1, w2, n_results)
-    for i in groups.items():
-        print (i)
 
     # Sentence Generation
-    sentence_generator = SentenceGenerator(groups)
-    test = sentence_generator.generate_sentences(15)
-    print(test)
+    sentence_gen = SentenceGenerator()
+    sentence_gen.add_word_groups(groups)
+    print(sentence_gen.get_cfg())
+    for i in sentence_gen.generate_sentences(5):
+        print(i)
