@@ -59,7 +59,11 @@ class CFG(object):
         sentence = ''
 
         # select one production of this symbol randomly
-        rand_prod = random.choice(self.prod[symbol])
+        rand_prod = ""
+        while True:
+            rand_prod = random.choice(self.prod[symbol])
+            if len(rand_prod) != 0:
+                break
 
         for sym in rand_prod:
             # for non-terminals, recurse
