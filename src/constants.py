@@ -1,14 +1,17 @@
-BASE_CFG = {
-    "S" : [["NP", "VP"]],
-    "NP" : [["DT", "NN"], ["NN"]],
-    "VP" : [["VB"], ["VB", "NN"], ["VBD"], ["VBD", "NN"], 
-            ["VBG"], ["VDG", "NN"], ["VBN"], ["VBN", "NN"],
-            ["VBP"], ["VBP", "NN"], ["VBZ"], ["VBZ", "NN"]
-        ],      
-    "PP" : [["IN", "NP"]],
-    "DT" : ["the", "this", "that", "these", "those", "my", "your"],
-    "IN" : ["on"],
-}
+BASE_CFG = "base.cfg"
+START_SYMBOL = "S"
+
+# BASE_CFG = {
+#     "S" : [["NP", "VP"]],
+#     "NP" : [["DT", "NN"], ["NN"]],
+#     "VP" : [["VB"], ["VB", "NN"], ["VBD"], ["VBD", "NN"], 
+#             ["VBG"], ["VDG", "NN"], ["VBN"], ["VBN", "NN"],
+#             ["VBP"], ["VBP", "NN"], ["VBZ"], ["VBZ", "NN"]
+#         ],      
+#     "PP" : [["IN", "NP"]],
+#     "DT" : ["the", "this", "that", "these", "those", "my", "your"],
+#     "IN" : ["on"]
+# }
 
 # CC coordinating conjunction
 # CD cardinal digit

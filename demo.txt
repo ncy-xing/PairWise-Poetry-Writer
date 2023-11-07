@@ -1,5 +1,5 @@
 Test inputs to run in test.py
 
-python3 demo.py ankle run 10
+python3 demo.py fire ice 10
 python3 demo.py blue sad 10
 python3 demo.py fire ice 10

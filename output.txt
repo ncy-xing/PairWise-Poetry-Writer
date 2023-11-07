@@ -1,20 +1,89 @@
 Started Generator
 Initializing Word Generator...
 Initialized.
-WordGenerator
-data source = 'swow_associative_embeddings.csv'
-size = 12218 words
-Word groups: 
-('NN', ['ice', 'freeze', 'icy', 'icicle', 'igloo', 'colder', 'melt', 'defrost', 'freezer', 'icebox', 'frigid', 'iceberg', 'skate', 'winter', 'chill', 'snowball', 'skater', 'fire', 'heater', 'refrigerator', 'snowboard', 'scraper', 'burn', 'blaze', 'flame', 'ice hockey', 'sleet', 'emotionless', 'combustion', 'fridge', 'brimstone', 'fireplace', 'bonfire', 'parka', 'hearth', 'kindle', 'dragon', 'burner', 'flare'])
-('NNS', ['thaw', 'goosebumps', 'skis', 'dragons', 'sparks', 'mittens', 'ashes'])
-('RBR', ['glacier', 'lighter'])
-('JJ', ['frozen', 'arctic', 'cold', 'frosty', 'slushy', 'snowman', 'tundra', 'polar bear', 'extinguish', 'furnace', 'numb', 'northern', 'ignite', 'campsite', 'cool', 'smoky', 'warmer'])
-('VBG', ['melting', 'skating', 'freezing', 'cooling', 'chilling', 'air conditioning', 'burning', 'heating', 'skiing'])
-('NNP', ['Antarctic', 'South Pole', 'Popsicle', 'Alaska', 'North Pole', 'Nordic', 'Iceland', 'Norway', 'February', 'January', 'Sweden'])
-('RB', ['frost', 'chilly', 'shiver'])
-('VBZ', ['cooler', 'flames'])
-('VBP', ['snow', 'flint'])
-('VBD', ['frosted', 'stoke', 'burned', 'iced', 'melted', 'sled'])
-('VB', ['mitten'])
+Initializing Sentence generator...
+S -> C CC C
+C -> NP VP | EX NP | EX NP VP
+EX -> there is
+NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT
+PP -> IN NP
+VP -> VB | VB PP | ADV VB | ADV VB PP
+ADV -> RB | RBR | RBS
+DT -> the | a | an | this | these | that | those | PRP
+PRP -> my | his | her | their | your | POS
+NN -> fly | slay | execute | murder | assassination | flight | mockingbird | aviation | glide | assassin | massacre | eradicate | genocide | annihilate | swoop | airplane | hover | helicopter | plane | slaughter | vulture | aircraft | killer | execution | destroy | parachute | strangle | suicide | take off | flutter | airline | strangulation | hawk | pilot | jet | murderer | bomber | carrion | bird | prey | cockpit | pigeon | stewardess | slayer | propeller | sparrow | flighty | bluejay | dragonfly | magpie | landing | finch | flyer | lark | heron | crane | elimination | airship | parakeet | chirp | hijack | budgie | blackbird | robin
+IN -> in | with | on | after | although | as | as if | as long as | because | before | despite | even if | even though | if | in order that | rather than | since | so that | that | though | unless | until | when | where | whereas | whether | while | wipe out
+JJ -> JJR | JJS | exterminate | flew | homicide | kite | co-pilot | falcon | pheasant | flight attendant | lynch | beak | pelican | toucan | nightingale
+VB -> VBD | VBG | VBN | VBP | VBZ | kill | soar | eliminate
+VBD -> killed
+VBG -> flying | wing | soaring | killing
+VBN -> 
+VBP -> eagle | decimate | flap | obliterate | die | quail
+VBZ -> 
+CC -> for | and | nor | but | or | yet | so
+JJR -> swatter
+JJS -> nest
+LS -> 
+MD -> 
+NNS -> wings | flies | birds | planes | feathers
+NNP -> 
+NNPS -> 
+POS -> 
+RB -> 
+RBR -> 
+RBS -> 
+RP -> 
+PDT -> 
+
+Generating sentences...
+there is the exterminate planes yet 
+there is eliminate but flying 
+there is those hover kill until the flight attendant yet there is an dragonfly 
+so that those assassin yet there is your strangulation 
+those kill in the hijack yet there is 
 
 
+
+Started Generator
+Initializing Word Generator...
+Initialized.
+Initializing Sentence generator...
+S -> C CC C
+C -> NP VP | EX NP | EX NP VP
+EX -> there is
+NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT
+PP -> IN NP
+VP -> VB | VB PP | ADV VB | ADV VB PP
+ADV -> RB | RBR | RBS
+DT -> the | a | an | this | these | that | those | PRP
+PRP -> my | his | her | their | your | POS
+NN -> ice | freeze | icy | icicle | igloo | colder | melt | defrost | freezer | icebox | frigid | iceberg | skate | winter | chill | snowball | skater | fire | heater | refrigerator | snowboard | scraper | burn | blaze | flame | ice hockey | sleet | emotionless | combustion | fridge | brimstone | fireplace | bonfire | parka | hearth | kindle | dragon | burner | flare
+IN -> in | with | on | after | although | as | as if | because | before | despite | even if | even though | if | in order that | rather than | since | so that | that | though | unless | until | when | where | whereas | whether | while
+JJ -> JJR | JJS | frozen | arctic | cold | frosty | slushy | snowman | tundra | polar bear | extinguish | furnace | numb | northern | ignite | campsite | cool | smoky | warmer
+VB -> VBD | VBG | VBN | VBP | VBZ | mitten
+VBD -> frosted | stoke | burned | iced | melted | sled
+VBG -> melting | skating | freezing | cooling | chilling | air conditioning | burning | heating | skiing
+VBN -> 
+VBP -> snow | flint
+VBZ -> cooler | flames
+CC -> for | and | nor | but | or | yet | so
+JJR -> 
+JJS -> 
+LS -> 
+MD -> 
+NNS -> thaw | goosebumps | skis | dragons | sparks | mittens | ashes
+NNP -> Antarctic | South Pole | Popsicle | Alaska | North Pole | Nordic | Iceland | Norway | February | January | Sweden
+NNPS -> 
+POS -> 
+RB -> frost | chilly | shiver
+RBR -> glacier | lighter
+RBS -> 
+RP -> 
+PDT -> 
+
+Generating sentences...
+North Pole frost snow with the furnace goosebumps so there is these winter 
+as long as that frozen goosebumps but her mittens flames 
+there is that skis or there is that arctic skiing on that ashes 
+there is an ignite mittens air conditioning but there is South Pole 
+glacier frosted yet there is the mittens sled unless these polar bear ashes 
