@@ -14,8 +14,8 @@ if __name__ == '__main__':
     Demo script which walks through all steps of poetry processing. 
 
     Usage:
-        python3 demo.py fire ice 100
-        python3 demo.py blue sad 100
+        python3 demo.py fire ice 100 >> demo_output.txt
+        python3 demo.py oil water 100 >> demo_output.txt
     """
     n_results = 10
     if len(sys.argv) < 3:
@@ -44,6 +44,8 @@ if __name__ == '__main__':
         print(i)
     
     # Poem generation
+    print("Generating poem...")
     poem_gen = PoemGenerator()
     poem_gen.add_sentences(sentences)
+    print("\nGenerated poem: ")
     print(poem_gen.generate_poem())

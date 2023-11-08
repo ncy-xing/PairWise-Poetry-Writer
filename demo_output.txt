@@ -6,92 +6,81 @@ S -> C CC C
 C -> NP VP
 EX -> there is | there was | here is
 NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT | EX DT JJ NN | EX DT JJ NNS
-PP -> IN NP
+PP -> IN NP | IN NP VP
 VP -> VB PP | ADV VB PP | VB | ADV VB
 ADV -> RB | RBR | RBS
 DT -> the | a | an | this | these | that | those | PRP
 PRP -> my | his | her | their | your | POS
-NN -> water | liquid | fluid | pump | splash | dilute | fountain | seep | spout | sprinkler | drip | flood | boil | hydrate | squirt | faucet | immerse | bucket | condensation | vapor | evaporate | swim | pool | whirlpool | osmosis | submerge | inlet | waterfall | moat | pail | spurt | hot tub | flow | quench | lagoon | lake | geyser | chlorine | plunge | brook | pond | fish tank | dam | filter | spray | sprinkle | thirsty | spill | river | scuba | downstream | tap | soak | bathtub | drain | otter | funnel | saturate | steam | wetland | channel | oil | bridge | cove | canteen | pitcher | dissolve | sponge | erosion | deluge | marsh | pier | jug | conserve | ravine | oasis | gallon | surface | life jacket | kayak | bath | moisture | float | brine | peninsula | tide | sailboat | submarine | absorbent | baptism | boiler | liter | nymph | snorkel | shower | dip | bathe | dunk | marine | dew | soapy | plumber | upstream | drought | murky | hovercraft | hiccup | drinking | refreshment | depth | gutter | fill | drench | canoe | drift | aquarium | hydrogen | ferry | tsunami | surge | seahorse | dolphin | wharf | sailing
-IN -> in | with | on | after | although | as | as if | because | before | despite | even if | even though | if | rather than | since | so that | though | unless | until | when | where | whether | while | aqua | overflow | absorb | basin
-JJ -> JJR | JJS | leak | swimmer | swimming pool | stagnant | drown | shallow | dive | lukewarm | spa | gush | watery | tepid | puddle | solvent | tonic | canal | raft | swamp | bay | lifeguard | swimsuit | goldfish | wet | slippery | deep | rinse | isle | bog
-VB -> VBD | VBG | VBN | VBP | VBZ | creek | cascade | baptize
-VBD -> hose | boiled | soaked | saturated
-VBG -> swimming | drowning | dripping | diving | flowing | floating | refreshing | boiling | boating | spilling | bubbling | sparkling | plumbing | bathing | rowing | glistening | cleansing
-VBN -> 
-VBP -> pour | erode | sink | mineral
-VBZ -> pipes | drops
+NN -> fire | combustion | burn | flame | ignite | brimstone | furnace | spark | flint | flare | firefighter | bonfire | hearth | burner | fireman | inferno | ash | torch | burnt | campfire | chimney | match | hellfire | charcoal | force | discharge | intensity | kiln | friction | ignition | peat | crackle | lit | cannon | hell | coerce | wick | cremate | evacuate | fuel | soot | compel | caveman | cremation | damnation | blazer | goblet | push | forge | heater | alarm | candle | light up | firework | boiler | insist | pressure | leverage | resistance | smoke | sizzle | element | energy | thrust | marshmallow | power | blacksmith | catalyst | radiator | nudge | blast | overpower | fierce | emergency | brute | sack | warmer | influence | gasoline | detector | explosion | pull | grill | cabin | strength | surge | motivate | poke | prod | danger | warn | missile | torque | cookout | destruction | catapult | barbecue | inertia | puff | hire | sauna | domination | dominance | propel | control | artillery | entropy | apocalypse | hazard | broil | red hair | devil | solder | prevention | salamander | resist | budge
+IN -> in | with | on | after | although | as | as if | because | before | despite | even if | even though | if | rather than | since | so that | though | unless | until | when | where | whether | while | warmth | fuse | boy scout
+JJ -> JJR | JJS | blaze | extinguish | kindle | campsite | kerosene | smoky | infernal | fiery | frying pan | firetruck | intense | assert | caustic | hot | impose | purgatory | explosive | underworld | destructive | magnetic | demon | kinetic | sulfur | vigor | survival | urn
+VB -> VBD | VBG | VBN | VBP | VBZ | shove
+VBD -> stoke | burned | charred | weld | stove | brigade | persuade
+VBG -> burning | welding | heating | camping | warming | searing | roasting | smoking
+VBN -> smoked | inflamed
+VBP -> dragon | fireplace | camp | heat | coal | camper | forceful | dismiss | firecracker | dominate
+VBZ -> fireworks
 CC -> for | and | nor | but | or | yet | so
-JJR -> 
+JJR -> willpower
 JJS -> 
 LS -> 
 MD -> 
-NNS -> taps | tub | ducks | boats | showers
-NNP -> Venice
+NNS -> flames | sparks | dragons | ashes | candles | fumes | elements | logs | siren | sticks | forces | tongs | levers
+NNP -> Phoenix | Dante | Hades | Sparky | Satan
 NNPS -> 
 POS -> 
-RB -> diver | stream | thirst | gully | porpoise | well
-RBR -> 
+RB -> fighter | smother | lever | oven
+RBR -> lighter
 RBS -> 
 RP -> 
 PDT -> 
-FW -> valve
 
 Generating sentences...
 Generated sentences: 
-Venice saturated overflow these gush taps or there is these watery fill creek 
-A tonic deluge, so even though these squirt 
-Those stream creek where that taps nor that rinse whirlpool mineral 
-The liquid thirst baptize for glistening 
-A lifeguard tub gully baptize or there is this canal bath creek 
-Baptize yet a swimming pool drops 
-There was the swimsuit baptize for absorb 
-Creek yet that raft showers mineral 
-Venice drops or there was this canal tub boiled 
-Yet these taps cleansing unless that lifeguard dunk 
-There is his isle ducks pipes despite but Venice 
-The swamp bath rather than there was his watery peninsula and gully pipes if Venice 
-An tub cascade as if so creek whether her swimmer taps 
-Slippery osmosis bubbling until there was the swimmer lagoon, but here is a seep boiled with 
-That swimsuit showers baptize yet a moat creek 
-The boats floating, so there was a swamp osmosis saturated 
-Her shallow absorbent glistening in there is this slippery nymph yet bathing aqua 
-Well boiled yet a swamp taps boiling because there were an slippery taps 
-An raft tied cascade after this solvent bridge but boiled 
-There was that isle gutter despite a lake, but there was these isle showers gully creek when 
+This candle charred and these tongs shove though there was this siren 
+Those purgatory radiator fireworks nor here is their sizzle oven shove 
+Fighter smoked so those impose burn inflamed where 
+this gasoline inflamed so here is these extinguish shove although those sulfur camp so that their vigor tongs shove fuse there is their impose insist stoke 
+Those sparks dragon and Dante roasting 
+Searing before the survival blast but these kinetic fire 
+A broil searing so that there was the smoky siren or these fumes fireworks 
+Those kerosene forces before fireplace even if here is that smoky campfire for there is these assert siren camping 
+An light up lever although and 
+Fighter shove yet there is these kinetic blast shove 
+These lighter shove so that resistance dragon if shove 
+There was this firetruck explosion stove nor here is this campsite sticks searing 
+For heating 
+An tongs or oven dragon 
+That kerosene tongs smother smoked so this elements while there was his fiery dragons 
+Smother shove warmth the prevention or Satan welding 
+Persuade so burning after this urn pressure 
+The surge or a bonfire oven dismiss 
+Here is an intense thrust smother camping on inflamed so Sparky smother weld if this demon crackle 
+Burning yet these charred whether an element lever fireworks after there is those frying pan danger 
 
+Generating poem...
 num sentences = 4
 num stanzas = 4
-Venice saturated
-overflow these
-gush taps
-or there
-is these
-watery fill
-creek 
-A tonic deluge,
-so even
-though these
-squirt 
+Generated poem: 
+This candle charred and these
+tongs shove though there
+was this siren 
+Those purgatory radiator fireworks
+nor here is their
+sizzle oven shove 
 
-Those stream
-creek where
-that taps
-nor that
-rinse whirlpool
-mineral 
-The liquid thirst
-baptize for
-glistening 
+Fighter smoked so those impose
+burn inflamed where 
+this gasoline inflamed so here
+is these extinguish shove although
+those sulfur camp so that
+their vigor tongs shove
+fuse there is their
+impose insist stoke 
 
-A lifeguard tub
-gully baptize
-or there
-is this
-canal bath
-creek 
+Those sparks dragon and Dante roasting 
 
-Baptize yet a
-swimming pool
-drops 
+Searing before the survival blast
+but these kinetic fire 
 
 

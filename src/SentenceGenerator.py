@@ -18,6 +18,7 @@ class SentenceGenerator():
         """Initialize base CFG."""
         print("Initializing Sentence generator...")
         self.cfg = CFG(BASE_CFG)
+        self.lang_tool = language_tool_python.LanguageTool("en-US")
     
     def add_word_groups(self, word_groups : Dict[str, List]) -> None:
         """
@@ -49,9 +50,10 @@ class SentenceGenerator():
 
         returns: (score, corrected sentence)
         """
-        with language_tool_python.LanguageToolPublicAPI("en-US") as lang_tool:
-            matches = lang_tool.check(sentence)
-        return (len(matches), lang_tool.correct(sentence))
+        # with language_tool_python.LanguageTool("en-US") as lang_tool:
+            # matches = lang_tool.check(sentence)
+        matches = self.lang_tool.check(sentence)
+        return (len(matches), self.lang_tool.correct(sentence))
     
     def get_cfg(self) -> str:
         """Returns the internal CFG."""
