@@ -37,3 +37,61 @@ PDT ->
 FW -> valve
 
 Generating sentences...
+Generated sentences: 
+Venice saturated overflow these gush taps or there is these watery fill creek 
+A tonic deluge, so even though these squirt 
+Those stream creek where that taps nor that rinse whirlpool mineral 
+The liquid thirst baptize for glistening 
+A lifeguard tub gully baptize or there is this canal bath creek 
+Baptize yet a swimming pool drops 
+There was the swimsuit baptize for absorb 
+Creek yet that raft showers mineral 
+Venice drops or there was this canal tub boiled 
+Yet these taps cleansing unless that lifeguard dunk 
+There is his isle ducks pipes despite but Venice 
+The swamp bath rather than there was his watery peninsula and gully pipes if Venice 
+An tub cascade as if so creek whether her swimmer taps 
+Slippery osmosis bubbling until there was the swimmer lagoon, but here is a seep boiled with 
+That swimsuit showers baptize yet a moat creek 
+The boats floating, so there was a swamp osmosis saturated 
+Her shallow absorbent glistening in there is this slippery nymph yet bathing aqua 
+Well boiled yet a swamp taps boiling because there were an slippery taps 
+An raft tied cascade after this solvent bridge but boiled 
+There was that isle gutter despite a lake, but there was these isle showers gully creek when 
+
+num sentences = 4
+num stanzas = 4
+Venice saturated
+overflow these
+gush taps
+or there
+is these
+watery fill
+creek 
+A tonic deluge,
+so even
+though these
+squirt 
+
+Those stream
+creek where
+that taps
+nor that
+rinse whirlpool
+mineral 
+The liquid thirst
+baptize for
+glistening 
+
+A lifeguard tub
+gully baptize
+or there
+is this
+canal bath
+creek 
+
+Baptize yet a
+swimming pool
+drops 
+
+
