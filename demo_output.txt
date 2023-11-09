@@ -84,3 +84,110 @@ Searing before the survival blast
 but these kinetic fire 
 
 
+Started Generator
+Initializing Word Generator...
+Initialized.
+Started Generator
+Initializing Word Generator...
+Initialized.
+Initializing Sentence generator...
+S -> C CC C
+C -> NP VP
+EX -> there is | there was | here is
+NP -> DT JJ NN | DT NN | NNP | DT JJ NNS | DT NNS | NNPS | PDT | EX DT JJ NN | EX DT JJ NNS
+PP -> IN NP | IN NP VP
+VP -> VB PP | ADV VB PP | VB | ADV VB
+ADV -> RB | RBR | RBS
+DT -> the | a | an | this | these | that | those | PRP
+PRP -> my | his | her | their | your | POS
+NN -> ice | freeze | icy | icicle | igloo | colder | melt | defrost | freezer | icebox | frigid | iceberg | skate | winter | chill | snowball | skater | fire | heater | refrigerator | snowboard | scraper | burn | blaze | flame | ice hockey | sleet | emotionless | combustion | fridge | brimstone | fireplace | bonfire | parka | hearth | kindle | dragon | burner | flare | kerosene | firefighter | spark | campfire | camp | inferno | torch | ash | fireman | hail | flake | heat | penguin | warmth | chimney | match | charcoal | compress | radiator | hot chocolate | hellfire | heartless | uncaring | fiery | discharge | crisp | boiler | blazer | shudder | weld | crackle | climate change | slippery | breaker | marshmallow | wick | ice cream | peat | scarf | hell | goblet | cube | ignition | muff | fusion | soot | camper | coal | cremate | hotter | pickax | evacuate | damnation | caveman | sledge | cremation | fuel | sore throat | cough | candle | glove | refreshment | climate | cream | sizzle | summer | jacket | lodge | steam | coat | frosting | condensation | fan | breezy | fighter | friction | light up | pole | cone | seal | exposure | drift | detachment | hose
+IN -> in | with | on | after | although | as | as if | because | before | despite | even if | even though | if | rather than | since | so that | though | unless | until | when | where | whether | while
+JJ -> JJR | JJS | frozen | arctic | cold | frosty | slushy | snowman | tundra | polar bear | extinguish | furnace | numb | northern | ignite | campsite | cool | smoky | warmer | clammy | polar | burnt | infernal | hockey | Canadian | hot | kiln | unsympathetic | slick | brisk | cabin | tepid | Russian | hokey | tingle | lukewarm | element | windy | warm | north | underworld | smoke
+VB -> VBD | VBG | VBN | VBP | VBZ | mitten
+VBD -> frosted | stoke | burned | iced | melted | sled | slipped | lit | frying pan | firetruck | lemonade | smoked
+VBG -> melting | skating | freezing | cooling | chilling | air conditioning | burning | heating | skiing | sliding | slipping | warming | camping | global warming | welding | sneezing | shaking | searing | boiling | refreshing
+VBN -> charred
+VBP -> snow | flint | ski | puck | stove | cannon | wonderland | glide | fuse
+VBZ -> cooler | flames | flakes | sticks
+CC -> for | and | nor | but | or | yet | so
+JJR -> 
+JJS -> 
+LS -> 
+MD -> 
+NNS -> thaw | goosebumps | skis | dragons | sparks | mittens | ashes | cubes | gloves | candles | elements | logs | fumes | seasons | mountains
+NNP -> Antarctic | South Pole | Popsicle | Alaska | North Pole | Nordic | Iceland | Norway | February | January | Sweden | November | Canada | December | Alpine | Phoenix | Dante | Poland | Alps
+NNPS -> 
+POS -> 
+RB -> frost | chilly | shiver
+RBR -> glacier | lighter
+RBS -> 
+RP -> 
+PDT -> 
+
+Generating sentences...
+Generated sentences: 
+December shiver flint and there is those warmer condensation mitten when there was those frosty match 
+Here is those kiln burn chilly skating until there is those brisk match glacier cooling until this burnt detachment glacier lemonade before this ice mitten but here is a frosty logs shiver unless that radiator cooler 
+Charred where and this furnace dragons shiver lemonade 
+November for a caveman puck though Dante 
+Burned but glide as 
+Those ashes mitten or those goosebumps though 
+Skiing so Popsicle glacier stove though those warmer marshmallow lighter firetruck 
+Or those furnace mittens mitten even if Alps 
+That snowman blaze frost sticks nor the slushy skis melted 
+This lukewarm elements wonderland in there was that ignite mittens glide nor skating 
+A cool skis puck but warming whether Alaska smoked 
+Her fumes cooler but the underworld elements charred because 
+An ash mitten yet the logs smoked 
+Melting rather than these hot flake iced for here is these infernal fumes chilly lit if here is these lukewarm ashes flint even if there is my smoky ashes camping before there is those frosty sparks lighter charred if the cubes lighter frosted 
+Here is a smoke mittens as there is those cold mountains yet Popsicle glacier skiing 
+Frosted and there were that kiln goosebumps rather than here is those brisk skate fuse on 
+This camp air conditioning rather than here is this lukewarm soot so Norway 
+A north summer chilly firetruck, yet there is the frozen exposure glacier burning even though these northern evacuate chilly lemonade 
+Freezing whether but there was an infernal skater so that this fireplace sled 
+Melted even though a compress yet that snowman seasons sticks 
+Generating poem...
+
+Generated poem: 
+num sentences = 3
+num stanzas = 3
+December shiver flint
+and there
+is those
+warmer condensation
+mitten when
+there was
+those frosty
+match 
+Here is those
+kiln burn
+chilly skating
+until there
+is those
+brisk match
+glacier cooling
+until this
+burnt detachment
+glacier lemonade
+before this
+ice mitten
+but here
+is a
+frosty logs
+shiver unless
+that radiator
+cooler 
+
+Charred where and
+this furnace
+dragons shiver
+lemonade 
+November for
+a caveman
+puck though
+Dante 
+
+Burned but glide
+as 
+
+

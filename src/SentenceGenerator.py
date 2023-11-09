@@ -50,8 +50,6 @@ class SentenceGenerator():
 
         returns: (score, corrected sentence)
         """
-        # with language_tool_python.LanguageTool("en-US") as lang_tool:
-            # matches = lang_tool.check(sentence)
         matches = self.lang_tool.check(sentence)
         return (len(matches), self.lang_tool.correct(sentence))
     

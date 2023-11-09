@@ -6,7 +6,8 @@ Date: 10-2023
 from src.WordGenerator import WordGenerator
 from src.SentenceGenerator import SentenceGenerator
 from src.PoemGenerator import PoemGenerator
-from src.constants import N_GENERATED_SENTENCES, EMBEDDINGS, VOCAB
+from src.constants import N_GENERATED_SENTENCES, N_GENERATED_WORDS, \
+    EMBEDDINGS, VOCAB
 import sys
 
 if __name__ == '__main__':
@@ -14,15 +15,13 @@ if __name__ == '__main__':
     Demo script which walks through all steps of poetry processing. 
 
     Usage:
-        python3 demo.py fire ice 100 >> demo_output.txt
-        python3 demo.py oil water 100 >> demo_output.txt
+        python3 demo.py fire ice >> demo_output.txt
+        python3 demo.py oil water >> demo_output.txt
     """
     n_results = 10
     if len(sys.argv) < 3:
         print("Usage: word1 word2 [num_results]")
         sys.exit()
-    if len(sys.argv) == 4:
-        n_results = int(sys.argv[3])
 
     # Word generation
     print("Started Generator")
@@ -30,7 +29,7 @@ if __name__ == '__main__':
 
     w1 = sys.argv[1]
     w2 = sys.argv[2]
-    groups = word_generator.generate_word_groups(w1, w2, n_results)
+    groups = word_generator.generate_word_groups(w1, w2, N_GENERATED_WORDS)
 
     # Sentence Generation
     sentence_gen = SentenceGenerator()
