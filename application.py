@@ -7,15 +7,35 @@ Web application for routing API requests to generate poetry given two input word
 """
 
 import os, sys
-from flask import Flask, render_template, request, send_file, abort,jsonify, session
+from flask import Flask, render_template, request, send_file, abort, jsonify, session
 
 application = Flask(__name__)
 
-@application.route('/', methods = ['GET', 'POST'])
+# Change variable notation for angularJS compatibility
+jinja_options = application.jinja_options.copy()
+jinja_options.update(dict(
+    block_start_string='<%',
+    block_end_string='%>',
+    variable_start_string='%%',
+    variable_end_string='%%',
+    comment_start_string='<#',
+    comment_end_string='#>',
+))
+application.jinja_options = jinja_options
+
+
+@application.route('/', methods = ['GET'])
 def index():
     """Load homepage."""
     if request.method == 'GET':
         return render_template('index.html')
+    
+@application.route('/generate-poem', methods = ['POST'])
+def generate_poem():
+    """Generate and return poem given two inspiring words."""
+    word_1 = request.args.get("word-1")
+    word_2 = request.args.get("word-2")
+    return jsonify(f"{word_1} {word_2}")
     
 # Run on local server
 if __name__ == '__main__':

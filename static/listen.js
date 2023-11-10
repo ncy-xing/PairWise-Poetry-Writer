@@ -1,3 +1,4 @@
+// TODO DELETE
 if ("webkitSpeechRecognition" in window) {
     console.log("Performing speech recognition");
     var speechRecognition = new speechRecognition();
