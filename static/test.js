@@ -16,13 +16,14 @@ app.directive('fileModel', ['$parse', function ($parse) {
 }]);
 
 app.controller('APIController', function ($scope, $log, $http) {
+    $scope.showTTS = false;
 
     $scope.getResults = function () {
+        $scope.poem = "Clicked poem value";
         console.log("Sending API Request...");
         $http.post('/generate-poem?word-1=w1&word-2=w2').then(function (response) {
             var responseData = response.data;
-            console.log(responseData);
-            $scope.poem = responseData;
+            document.getElementById("poem-text").innerHTML = responseData;
         });
     };
 
