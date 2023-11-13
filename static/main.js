@@ -17,33 +17,32 @@ app.directive('fileModel', ['$parse', function ($parse) {
 
 app.controller('APIController', function ($scope, $window, $http, $q) {
     $scope.showTTSButton = false;
-    $scope.obj= {test: false};
+    $scope.poemText = "";
+    $scope.word1 = "";
+    $scope.word2 = "";
 
-    // Generate poem via API Request
+    /* Generates poem via API request and displays to screen. */
     $scope.getResults = function () {
         $scope.poem = "Clicked poem value";
         console.log("Sending API Request...");
-        $http.post('/generate-poem?word-1=w1&word-2=w2').then(function (response) {
-            // var responseData = response.data;
-            // $scope.poem.text = response.data;
-            document.getElementById("poem-text").innerHTML = response.data;
-            // $scope.showTTSButton = true;
-            $scope.obj.test = true;
-            console.log($scope.obj.test);
+        var requestParams = "/generate-poem?word-1=".concat($scope.word1, "&word-2=", $scope.word2);
+        $http.post(requestParams).then(function (response) {
+            // Display poem
+            $scope.showTTSButton = true;
+            $scope.poemText = response.data;
         });
     };
 
-    // Enable TTS
+    /* Enables TTS on currently displaying poem. */
     $scope.enableTTS = function () {
         let speechSynthesis = window.speechSynthesis;
         if ("speechSynthesis" in window) {
-            let utterance = new SpeechSynthesisUtterance("Toby"); // TODO
-            speechSynthesis.speak(utterance);
-            utterance.text = "I'm so close"; // TODO
+            let utterance = new SpeechSynthesisUtterance($scope.poemText);
             speechSynthesis.speak(utterance);
         } else {
             alert("TTS is not supported in this browser.")
         }
     };
+
 }
 );

@@ -9,16 +9,24 @@
 </head>
 
 <body>
-    <!-- <div id="load-script" ng-controller="APIRequester">Test Div</div> -->
-
-    <!-- <script src="%% url_for('static', filename='tts.js') %%"></script> -->
     <script src="%% url_for('static', filename='main.js') %%"></script>
-    
     <div ng-app="myApp" ng-controller="APIController">
-        <button id="api-request-button" ng-controller="APIController" ng-click="getResults()">API Request</button>
-        <button id="enable-tts-button" ng-click="enableTTS()">Read Aloud</button>
-        <div id="poem-text"></div>
-        <div ng-controller="APIController">{{ obj.test }}</div>
+        <div>
+            <form ng-submit="getResults()">
+                <label for="word-2">Word 1:</label><br>
+                <input type="text" id="word-1" name="word-1" ng-model="word1"><br>
+                <label for="lname">Word 2:</label><br>
+                <input type="text" id="word-2" name="word-2" ng-model="word2"><br><br>
+                <input type="submit" value="Make Poem">
+              </form> 
+        </div>
+        <div>
+            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="showTTSButton">
+                Read Aloud
+            </button>
+        </div>
+        <div id="poem-text">{{ poemText }}</div>
+        <div>{{ obj.test }}</div>
     </div>
 
     <span id="generated-output"></span>
