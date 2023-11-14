@@ -11,7 +11,16 @@
 <body>
     <script src="%% url_for('static', filename='main.js') %%"></script>
     <div ng-app="myApp" ng-controller="APIController">
-        <div>
+        <div ng-show="showSavedPoems">
+            Load Poem: 
+            <select ng-model="poemToLoad" name="select-poem" id="select-poem">
+                <option ng-repeat="p in savedPoems" value="{{p.title}}">
+                    {{p.title}}
+                </option>
+            </select>
+            <button ng-click="loadPoem()">Load Poem</button>
+        </div>
+        <div id="generate-poem-form">
             <form ng-submit="getResults()">
                 <label for="word-2">Word 1:</label><br>
                 <input type="text" id="word-1" name="word-1" ng-model="word1"><br>
@@ -20,13 +29,19 @@
                 <input type="submit" value="Make Poem">
               </form> 
         </div>
+        <br>
         <div>
-            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="showTTSButton">
+            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="poemGenerated">
                 Read Aloud
             </button>
+            <button id="save-to-local" ng-click="savePoem()" ng-show="poemGenerated">
+                Save Poem
+            </button>
         </div>
-        <div id="poem-text">{{ poemText }}</div>
-        <div>{{ obj.test }}</div>
+        <div id="poem">
+            <div id="poem-title">{{ poemTitle }}</div>
+            <div id="poem-text">{{ poemText }}</div>
+        </div>
     </div>
 
     <span id="generated-output"></span>

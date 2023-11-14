@@ -1,34 +1,34 @@
 let app = angular.module('myApp', []);
 
-app.directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function (scope, element, attrs) {
-            var model = $parse(attrs.fileModel);
-            var modelSetter = model.assign;
-            element.bind('change', function () {
-                scope.$apply(function () {
-                    modelSetter(scope, element[0].files[0]);
-                });
-            });
-        }
-    };
-}]);
+function titleCase(str) {
+    str = str.toLowerCase();
+    return str.replace(/(^|\s)\S/g, function(t) { return t.toUpperCase() });
+}
 
 app.controller('APIController', function ($scope, $window, $http, $q) {
-    $scope.showTTSButton = false;
+    /* Initialize variables */
+    $scope.savedPoems = JSON.parse(localStorage.getItem("savedPoems"));
+    if($scope.savedPoems != null) {
+        $scope.poemToLoad = "test";
+        $scope.showSavedPoems = true;
+    }
+    $scope.poemGenerated = false;
+    $scope.poemTitle = "";
     $scope.poemText = "";
     $scope.word1 = "";
     $scope.word2 = "";
 
+    console.log("Saved poems: ")
+    console.log($scope.savedPoems);
+
     /* Generates poem via API request and displays to screen. */
     $scope.getResults = function () {
-        $scope.poem = "Clicked poem value";
         console.log("Sending API Request...");
         var requestParams = "/generate-poem?word-1=".concat($scope.word1, "&word-2=", $scope.word2);
         $http.post(requestParams).then(function (response) {
             // Display poem
-            $scope.showTTSButton = true;
+            $scope.poemGenerated = true;
+            $scope.poemTitle = titleCase($scope.word1 + " and " + $scope.word2);
             $scope.poemText = response.data;
         });
     };
@@ -44,5 +44,24 @@ app.controller('APIController', function ($scope, $window, $http, $q) {
         }
     };
 
+    /* Adds a poem to local storage. */
+    $scope.savePoem = function() {
+        var poem = {title: $scope.poemTitle, text: $scope.poemText};
+        if($scope.savedPoems === null) {
+            $scope.savedPoems = {}
+        }
+        if($scope.savedPoems[$scope.poemTitle] != null) {
+            $scope.poemTitle += " 1";
+        }
+        $scope.savedPoems[$scope.poemTitle] = poem;
+        
+        localStorage.setItem("savedPoems", JSON.stringify($scope.savedPoems));
+        console.log("Save poem clicked");
+    }
+
+    $scope.loadPoem = function() {
+        $scope.poemTitle = $scope.poemToLoad;
+        $scope.poemText = $scope.savedPoems[$scope.poemToLoad].text;
+    }
 }
 );

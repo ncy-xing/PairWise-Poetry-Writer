@@ -35,9 +35,9 @@ def generate_poem():
     """Generate and return poem given two inspiring words."""
     word_1 = request.args.get("word-1")
     word_2 = request.args.get("word-2")
-    return jsonify(f"{word_1} {word_2}")
+    return jsonify("This is a test poem")
     
 # Run on local server
 if __name__ == '__main__':
-    application.debug = True  # Refreshes server when code is changed
+    application.debug = True  # TODO Refreshes server when code is changed
     application.run(host='127.0.0.1', port=8000)
