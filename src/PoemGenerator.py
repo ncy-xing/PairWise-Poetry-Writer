@@ -15,6 +15,10 @@ class PoemGenerator():
         """Initialize empty list of sentences."""
         self.sentences = []
     
+    def reset(self) -> None:
+        """Clears the internal list of sentences"""
+        self.sentences = []
+
     def add_sentences(self, sentences : str) -> None:
         """Add given sentences to internal list."""
         self.sentences += sentences
@@ -27,8 +31,6 @@ class PoemGenerator():
         partition = random.randint(MIN_SENTENCE_PARTITION, MAX_SENTENCE_PARTITION)
         num_stanzas = random.randint(MIN_STANZA_LEN, MAX_STANZA_LEN)
 
-        print(f"num sentences = {num_stanzas}")
-        print(f"num stanzas = {num_stanzas}")
         stanzas = numpy.array_split(numpy.array(sentences), num_stanzas)
         for stanza in stanzas: 
             for sentence in stanza:

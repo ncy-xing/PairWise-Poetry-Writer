@@ -9,14 +9,15 @@ app.controller('APIController', function ($scope, $window, $http, $q) {
     /* Initialize variables */
     $scope.savedPoems = JSON.parse(localStorage.getItem("savedPoems"));
     if($scope.savedPoems != null) {
-        $scope.poemToLoad = "test";
         $scope.showSavedPoems = true;
     }
     $scope.poemGenerated = false;
+    $scope.poemLoaded = false;
     $scope.poemTitle = "";
     $scope.poemText = "";
     $scope.word1 = "";
     $scope.word2 = "";
+    $scope.storageMessage = "";
 
     console.log("Saved poems: ")
     console.log($scope.savedPoems);
@@ -25,11 +26,17 @@ app.controller('APIController', function ($scope, $window, $http, $q) {
     $scope.getResults = function () {
         console.log("Sending API Request...");
         var requestParams = "/generate-poem?word-1=".concat($scope.word1, "&word-2=", $scope.word2);
+        console.log(requestParams);
         $http.post(requestParams).then(function (response) {
-            // Display poem
-            $scope.poemGenerated = true;
-            $scope.poemTitle = titleCase($scope.word1 + " and " + $scope.word2);
-            $scope.poemText = response.data;
+            if(response.data.length > 0) {
+                // Display poem
+                $scope.poemGenerated = true;
+                $scope.poemLoaded = false;
+                $scope.poemTitle = titleCase($scope.word1 + " and " + $scope.word2);
+                $scope.poemText = response.data;
+            } else {
+                $scope.poemText = "Word(s) not in vocab. Try different words.";
+            }            
         });
     };
 
@@ -54,14 +61,24 @@ app.controller('APIController', function ($scope, $window, $http, $q) {
             $scope.poemTitle += " 1";
         }
         $scope.savedPoems[$scope.poemTitle] = poem;
-        
         localStorage.setItem("savedPoems", JSON.stringify($scope.savedPoems));
-        console.log("Save poem clicked");
+        $scope.storageMessage = "Poem saved.";
     }
 
+    /* Loads a poem to local storage. */
     $scope.loadPoem = function() {
+        $scope.poemLoaded = true;
+        $scope.poemGenerated = false;
         $scope.poemTitle = $scope.poemToLoad;
         $scope.poemText = $scope.savedPoems[$scope.poemToLoad].text;
+    }
+
+    /* Removes a poem from local storage. */
+    $scope.removePoem = function() {
+        var poemToRemove = $scope.poemTitle;
+        delete $scope.savedPoems[poemToRemove];
+        localStorage.setItem("savedPoems", JSON.stringify($scope.savedPoems));
+        $scope.storageMessage = "Poem removed.";
     }
 }
 );

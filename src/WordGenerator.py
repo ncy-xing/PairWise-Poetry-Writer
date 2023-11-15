@@ -31,7 +31,7 @@ class WordGenerator():
         self.vocab = list(pd.read_csv(os.path.join("data", vocab_file)).Word)
         self.words = []
         print("Initialized.")
-    
+
     @staticmethod
     def tag_words(words : List[str]) -> Dict[str, List[str]]:
         """
@@ -51,6 +51,10 @@ class WordGenerator():
                 tag_groups.update({tag : [str(word)]})
         return tag_groups
     
+    def check_in_vocab(self, word : str) -> bool:
+        """Returns whether the given word is in the word generator's vocabulary."""
+        return word in self.vocab
+        
     def generate_midpoint_words(self, word1 : str, word2 : str, n_results : int=10) -> List[str]: 
         """
         Computes the midpoint between two words using word embeddings. 

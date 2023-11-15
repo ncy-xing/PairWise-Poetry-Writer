@@ -31,16 +31,22 @@
         </div>
         <br>
         <div>
-            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="poemGenerated">
+            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="poemGenerated || poemLoaded">
                 Read Aloud
             </button>
             <button id="save-to-local" ng-click="savePoem()" ng-show="poemGenerated">
                 Save Poem
             </button>
+            <button id="remove-from-local" ng-click="removePoem()" ng-show="poemLoaded">
+                Remove Poem
+            </button>
+            <div>{{ storageMessage }}</div>
         </div>
         <div id="poem">
             <div id="poem-title">{{ poemTitle }}</div>
-            <div id="poem-text">{{ poemText }}</div>
+            <div id="poem-text">
+                <pre>{{ poemText }}</pre> 
+            </div>
         </div>
     </div>
 

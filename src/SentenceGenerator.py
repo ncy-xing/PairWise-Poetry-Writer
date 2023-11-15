@@ -7,6 +7,7 @@ from typing import *
 from .constants import BASE_CFG, START_SYMBOL
 from .CFG import CFG
 import language_tool_python 
+import copy
 
 class SentenceGenerator():
     """
@@ -20,6 +21,10 @@ class SentenceGenerator():
         self.cfg = CFG(BASE_CFG)
         self.lang_tool = language_tool_python.LanguageTool("en-US")
     
+    def reset(self) -> None:
+        """Resets the internal CFG to the base CFG."""
+        self.cfg = CFG(BASE_CFG)
+
     def add_word_groups(self, word_groups : Dict[str, List]) -> None:
         """
         Add tagged words to the CFG
