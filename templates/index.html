@@ -5,52 +5,69 @@
     <meta charset="UTF-8">
     <title>Pairwise Poetry Writer</title>
     <link rel="icon" type="image/x-icon" href="%% url_for('static', filename='favicon.ico') %%">
+    <link rel="stylesheet" href="%% url_for('static', filename='main.css') %%">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 </head>
 
 <body>
-    <script src="%% url_for('static', filename='main.js') %%"></script>
-    <div ng-app="myApp" ng-controller="APIController">
-        <div ng-show="showSavedPoems">
-            Load Poem: 
-            <select ng-model="poemToLoad" name="select-poem" id="select-poem">
-                <option ng-repeat="p in savedPoems" value="{{p.title}}">
-                    {{p.title}}
-                </option>
-            </select>
-            <button ng-click="loadPoem()">Load Poem</button>
-        </div>
-        <div id="generate-poem-form">
-            <form ng-submit="getResults()">
-                <label for="word-2">Word 1:</label><br>
-                <input type="text" id="word-1" name="word-1" ng-model="word1"><br>
-                <label for="lname">Word 2:</label><br>
-                <input type="text" id="word-2" name="word-2" ng-model="word2"><br><br>
-                <input type="submit" value="Make Poem">
-              </form> 
-        </div>
-        <br>
-        <div>
-            <button id="enable-tts-button" ng-click="enableTTS()" ng-show="poemGenerated || poemLoaded">
-                Read Aloud
-            </button>
-            <button id="save-to-local" ng-click="savePoem()" ng-show="poemGenerated">
-                Save Poem
-            </button>
-            <button id="remove-from-local" ng-click="removePoem()" ng-show="poemLoaded">
-                Remove Poem
-            </button>
-            <div>{{ storageMessage }}</div>
-        </div>
-        <div id="poem">
-            <div id="poem-title">{{ poemTitle }}</div>
-            <div id="poem-text">
-                <pre>{{ poemText }}</pre> 
+    <div class="row">
+        <script src="%% url_for('static', filename='main.js') %%"></script>
+        <div ng-app="myApp" ng-controller="APIController">
+            <div class="container">
+                <h1>PairWise Poetry Writer</h1>
+                <div class="text">
+                    <div id="generate-poem-form">
+                        <h3>Make Poem</h3>
+                        <form ng-submit="getResults()">
+                            <label for="word-2">Word 1:</label><br>
+                            <input type="text" id="word-1" name="word-1" ng-model="word1"><br>
+                            <label for="lname">Word 2:</label><br>
+                            <input type="text" id="word-2" name="word-2" ng-model="word2"><br><br>
+                            <input type="submit" value="Make Poem">
+                            <span ng-show="loading">Making poem...</span>
+                            <br>
+                            <progress id="progress-bar" aria-label="Content loading…" ng-show="loading">
+                            </progress>
+                        </form>
+                    </div>
+                    <div ng-show="showSavedPoems">
+                        <h3>Load Poem</h3>
+                        <label for="select-poem">Select poem:</label><br>
+                        <select ng-model="poemToLoad" name="select-poem" id="select-poem">
+                            <option ng-repeat="p in savedPoems" value="{{p.title}}">
+                                {{p.title}}
+                            </option>
+                        </select>
+                        <button ng-click="loadPoem()">Load Poem</button>
+                    </div>
+                    <div id="display-buttons">
+                        <h3 ng-show="poemGenerated || poemLoaded">Read and Save</h3>
+                        <button id="enable-tts-button" ng-click="enableTTS()" ng-show="poemGenerated || poemLoaded">
+                            Read Aloud
+                        </button>
+                        <button id="save-to-local" ng-click="savePoem()" ng-show="poemGenerated">
+                            Save Poem
+                        </button>
+                        <button id="remove-from-local" ng-click="removePoem()" ng-show="poemLoaded">
+                            Remove Poem
+                        </button>
+                        <div>{{ storageMessage }}</div>
+                    </div>
+                </div>
             </div>
+
+            <div id="poem" class="container-right">
+                <h1></h1>
+                <div class="text">
+                    <div id="poem-title" class="poem-title">{{ poemTitle }}</div>
+                    <div id="poem-text">
+                        <pre>{{ poemText }}</pre>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <span id="generated-output"></span>
 </body>
 
 </html>

@@ -47,7 +47,6 @@ def generate_poem():
         return ""
     else:
         word_groups = word_gen.generate_word_groups(word_1, word_2, N_GENERATED_WORDS)
-
         sentence_gen.add_word_groups(word_groups)
         sentences = sentence_gen.generate_sentences(N_GENERATED_SENTENCES)
         poem_gen.add_sentences(sentences)

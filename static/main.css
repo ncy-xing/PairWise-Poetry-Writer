@@ -1,0 +1,35 @@
+html {
+    font-family: "Georgia", Times, serif;
+}
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/* h1 {
+    text-align: center;
+} */
+.container {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.container-right {
+    float: left;
+    width: 50%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.text {
+    display: inline-block; 
+    text-align: left;
+}
+.poem-title {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
