@@ -60,7 +60,6 @@ class CFG(object):
         sentence = ""
         if len(self.prod[symbol]) == 0:
             return ""
-
         # Select one production of this symbol randomly
         while True: 
             rand_prod = random.choice(self.prod[symbol])

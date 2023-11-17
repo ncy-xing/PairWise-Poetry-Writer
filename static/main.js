@@ -1,10 +1,12 @@
 let app = angular.module('myApp', []);
 
+/* Convert a string to titlecase. */
 function titleCase(str) {
     str = str.toLowerCase();
     return str.replace(/(^|\s)\S/g, function(t) { return t.toUpperCase() });
 }
 
+/* Controller for the webpage. */
 app.controller('APIController', function ($scope, $window, $http, $q) {
     /* Initialize variables */
     $scope.savedPoems = JSON.parse(localStorage.getItem("savedPoems"));

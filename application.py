@@ -58,5 +58,5 @@ def generate_poem():
     
 # Run on local server
 if __name__ == '__main__':
-    application.debug = True  # TODO Refreshes server when code is changed
+    # application.debug = True  
     application.run(host='127.0.0.1', port=8000)
