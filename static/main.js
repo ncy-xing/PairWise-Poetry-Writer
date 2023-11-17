@@ -48,6 +48,7 @@ app.controller('APIController', function ($scope, $window, $http, $q) {
         let speechSynthesis = window.speechSynthesis;
         if ("speechSynthesis" in window) {
             let utterance = new SpeechSynthesisUtterance($scope.poemText);
+            utterance.rate = 0.7;
             speechSynthesis.speak(utterance);
         } else {
             alert("TTS is not supported in this browser.")
