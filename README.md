@@ -1,9 +1,13 @@
-# PairWise Poetry Writer
-
-![The PairWise website.](https://github.com/ncy-xing/M7-Poetry-Generator/blob/39db997ea6cf82003cb5baf35d2fc90926ac2c93/static/example.png)
+# PairWise Poetry
+A web application that writes poetry using human word search strategies.
 
 ## Description
-This program takes in two words and writes a poem based on the two words.  
+Pairwise Poetry Writer is a web application that writes a poem based off of any two words. 
+
+The program works by using a word-searching algorithm based on [human word search strategies](#model-design) found in psychology. These words are then tokenized via the `nltk` library and spun into sentences with a context-free grammar. 
+
+## Example
+![The PairWise website.](https://github.com/ncy-xing/M7-Poetry-Generator/blob/39db997ea6cf82003cb5baf35d2fc90926ac2c93/static/example.png)
 
 ## Quickstart 
 Requires Python 3. 
@@ -23,7 +27,9 @@ Run the server with `python3 application.py` and open `http://localhost:8000/` i
 
 ### Model design 
 
-The generation model is based on my research with Prof. Abhilasha Kumar in the [lexicon lab](https://thelexiconlab.github.io/) at Bowdoin College. Specifically, it was inspired by the Connector word search task (Kumar et al., 2021). In this task, a person is given two different words and must find one word that describes them (e.g., we can describe the words "dog" and "cat" with the word "pet"). Since the basis of metaphor (and poetry) is finding connections between two elements, the Connector task would be a fitting method  to incorporate intelligence into the PairWise system. Per the evaluation of general intellect developed by Jordanous (2013), the system displays general intellect by organizing its processes to resemble human cognition in the Connector task. 
+The generation model is based on my research with Prof. Abhilasha Kumar in the [lexicon lab](https://thelexiconlab.github.io/) at Bowdoin College. Specifically, I was inspired by the Connector word search test. In this test, a person is given two different words and must find one new word that describes both of them (e.g., "dog" & "cat" --> "pet"). This test requires a unique kind of human thought, and finding how humans link two words together has greater applications in psychology research (Kumar et al., 2021). 
+
+Incidentally, there is another human task that involves finding connections between different words--poetry! A key part of poetry involves *connecting* concepts through metaphors. Thus, this PairWise Poetry writer is a good way of showing how the Connector word search test in action. 
 
 ### Program design
 
@@ -47,7 +53,7 @@ The poem generator accepted sentences and selected a semi-random number of sente
 
 ### Challenges and Limitations
 
-The most challenging (and limiting) aspect of the proejct was developing a CFG compatible with the nltk word tokenizations. First, the CFG could not contain any recursive patterns to avoid generating a sentence of infinite length. The CFG was also unweighted, meaning the system does not account for coordinating conjunctions and prepositions which appear more frequently than others. nltk also does not support conjugation. The challenge was accepting and working around development constraints and these limits with the CFG. 
+The most challenging (and limiting) aspect of the project was developing a CFG compatible with the nltk word tokenizations. First, the CFG could not contain any recursive patterns to avoid generating a sentence of infinite length. The CFG was also unweighted, meaning the system does not account for coordinating conjunctions and prepositions which appear more frequently than others. nltk also does not support conjugation. The challenge was accepting and working around development constraints and these limits with the CFG. 
 
 ## References
 - De Deyne, S., Navarro, D.J., Perfors, A. Brysbaert, M., & Storms, Gert. (2019). The “Small World of Words” english word association norms for over 12,000 cue words. *Research Models, 51*(987–1006). https://doi.org/10.3758/s13428-018-1115-7
